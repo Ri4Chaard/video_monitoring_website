@@ -1,0 +1,15 @@
+.loginButton {
+    color: #fff;
+    font-size: 16px;
+    padding: 8px 30px;
+    border: 1px solid #5c17cd;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1);
+    background: transparent;
+    transition: all 200ms ease-out;
+}
+
+.loginButton:hover {
+    background: #5c17cd;
+    transition: all 200ms ease-in;
+}

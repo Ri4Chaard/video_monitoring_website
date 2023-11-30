@@ -1,0 +1,14 @@
+.navButton {
+    color: #fff;
+    /* font-weight: 400;
+    font-style: normal; */
+    font-size: 16px;
+    line-height: 110%;
+    background: transparent;
+    transition: all 200ms ease-out;
+}
+
+.navButton:hover {
+    text-shadow: 0px 0 10px #fff;
+    transition: all 200ms ease-in;
+}
