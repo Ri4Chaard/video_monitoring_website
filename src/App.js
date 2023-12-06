@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 import slide1 from "./img/slider/slide1.png";
 import slide2 from "./img/slider/slide2.png";
 import slide3 from "./img/slider/slide3.png";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 function App() {
     const [sliderPos, setSliderPos] = useState(0);
@@ -56,30 +57,51 @@ function App() {
                     <div className="slider">
                         <div className="slider__items">
                             <div className="slider__text">
-                                {slides.map(
-                                    (slide, index) =>
-                                        index == sliderPos && (
-                                            <h1
-                                                className="slider__header"
-                                                key={index}
-                                            >
-                                                {slide.header}
-                                            </h1>
-                                        )
-                                )}
+                                <div className="slider__header">
+                                    <TransitionGroup component={null}>
+                                        {slides.map(
+                                            (slide, index) =>
+                                                index == sliderPos && (
+                                                    <CSSTransition
+                                                        key={index}
+                                                        timeout={700}
+                                                        classNames="headers"
+                                                        mountOnEnter
+                                                        unmountOnExit
+                                                    >
+                                                        <h1 key={index}>
+                                                            {slide.header}
+                                                        </h1>
+                                                    </CSSTransition>
+                                                )
+                                        )}
+                                    </TransitionGroup>
+                                </div>
                                 <div className="slider__description">
                                     <div className="slider__scroll">
                                         <span>Scroll</span>
                                     </div>
                                     <div className="slider__paragraph">
-                                        {slides.map(
-                                            (slide, index) =>
-                                                index == sliderPos && (
-                                                    <p key={index}>
-                                                        {slide.text}
-                                                    </p>
-                                                )
-                                        )}
+                                        <div className="slider__paragraph-cell">
+                                            <TransitionGroup component={null}>
+                                                {slides.map(
+                                                    (slide, index) =>
+                                                        index == sliderPos && (
+                                                            <CSSTransition
+                                                                key={index}
+                                                                timeout={700}
+                                                                classNames="paragraph"
+                                                                mountOnEnter
+                                                                unmountOnExit
+                                                            >
+                                                                <p key={index}>
+                                                                    {slide.text}
+                                                                </p>
+                                                            </CSSTransition>
+                                                        )
+                                                )}
+                                            </TransitionGroup>
+                                        </div>
                                         <button className="slider__button">
                                             Submit your application
                                         </button>
@@ -87,15 +109,25 @@ function App() {
                                 </div>
                             </div>
                             <div className="slider__image">
-                                {slides.map(
-                                    (slide, index) =>
-                                        index == sliderPos && (
-                                            <img
-                                                key={index}
-                                                src={slide.slide}
-                                            />
-                                        )
-                                )}
+                                <TransitionGroup component={null}>
+                                    {slides.map(
+                                        (slide, index) =>
+                                            index == sliderPos && (
+                                                <CSSTransition
+                                                    key={index}
+                                                    timeout={1000}
+                                                    classNames="images"
+                                                    mountOnEnter
+                                                    unmountOnExit
+                                                >
+                                                    <img
+                                                        key={index}
+                                                        src={slide.slide}
+                                                    />
+                                                </CSSTransition>
+                                            )
+                                    )}
+                                </TransitionGroup>
                             </div>
                         </div>
                         <div className="slider__buttons">
