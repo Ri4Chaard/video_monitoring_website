@@ -17,3 +17,8 @@ header {
     background-image: url(/src/img/background.png);
     background-position: center;
 }
+main {
+    display: flex;
+    flex: 1 0 100%;
+    flex-direction: column;
+}
