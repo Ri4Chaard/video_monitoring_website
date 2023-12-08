@@ -1,0 +1,30 @@
+.topbar {
+    /* position: absolute; */
+    /* width: 1200px; */
+    /* top: 16px; */
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin: 16px 0 0 0;
+    z-index: 1;
+}
+
+.topbar__logo {
+    flex: 0 1 473px;
+}
+.logo {
+}
+
+.topbar__menu {
+    flex: 0 1 482px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topbar__login {
+    flex: 0 1 auto;
+    display: flex;
+    align-items: center;
+    margin: 0 72px;
+}

@@ -1,11 +1,12 @@
 import { Container } from "./components/UI/container/Container";
 import "./styles/App.css";
 import "./styles/nullstyle.css";
-import "./styles/style.css";
+import "./styles/topbar.css";
+import "./styles/slider.css";
 import logo from "./img/logo.png";
 import { NavButton } from "./components/UI/buttons/header_buttons/nav_button/NavButton";
 import { LoginButton } from "./components/UI/buttons/header_buttons/login_button/LoginButton";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import slide1 from "./img/slider/slide1.png";
 import slide2 from "./img/slider/slide2.png";
 import slide3 from "./img/slider/slide3.png";
