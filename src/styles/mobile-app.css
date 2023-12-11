@@ -1,0 +1,62 @@
+.mobile-app {
+    position: relative;
+}
+.mobile-app__content {
+    display: flex;
+    flex-direction: column;
+    height: 553px;
+}
+
+.mobile-app__header {
+    max-width: 700px;
+    margin: 0 0 50px 0;
+}
+.mobile-app__header h1 {
+    font-size: 48px;
+    font-family: Play;
+    font-style: normal;
+    font-weight: 700px;
+    line-height: 110%;
+}
+
+.mobile-app__list {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    margin: 0 0 41px 0;
+}
+
+.mobile-app__list p {
+    display: inline-block;
+    opacity: 0.7;
+}
+.mobile-app__list li::before {
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 12px;
+    margin: 0 10px 0 0;
+    background: url(/src/img/mark/list-mark.svg);
+}
+
+.mobile-app__links {
+    display: flex;
+    margin: 0 0 148px 0;
+}
+.mobile-app__links img {
+    width: 121px;
+}
+.mobile-app__bg {
+    position: absolute;
+    width: 1003px;
+    height: 425px;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+.mobile-app__bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

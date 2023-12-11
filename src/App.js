@@ -4,6 +4,7 @@ import "./styles/nullstyle.css";
 import "./styles/topbar.css";
 import "./styles/slider.css";
 import "./styles/services.css";
+import "./styles/mobile-app.css";
 import logo from "./img/logo.png";
 import { NavButton } from "./components/UI/buttons/header_buttons/nav_button/NavButton";
 import { LoginButton } from "./components/UI/buttons/header_buttons/login_button/LoginButton";
@@ -16,6 +17,9 @@ import blur2 from "./img/slider/blur/Vector 3.png";
 import icon1 from "./img/cards/icon1.png";
 import icon2 from "./img/cards/icon2.png";
 import icon3 from "./img/cards/icon3.png";
+import googlePlay from "./img/app-store/GooglePlay.png";
+import appleStore from "./img/app-store/AppleStore.png";
+import appStoreBg from "./img/app-store/app-store_bg.png";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 function App() {
@@ -266,64 +270,113 @@ function App() {
                 </Container>
             </header>
             <main>
-                <Container>
-                    <div className="services">
-                        <div className="services__description">
-                            <div className="services__header">
-                                <h1>We provide the following services</h1>
-                            </div>
-                            <div className="services__text">
-                                <p>
-                                    In addition, technical support will always
-                                    advise you on any questions, and will also
-                                    carry out remote diagnostics of your system
-                                    upon request and in the shortest possible
-                                    time.
-                                </p>
-                            </div>
-                        </div>
-                        <div className="services__cards">
-                            <div className="card">
-                                <div className="card__image">
-                                    <img src={icon1} alt="not found" />
+                <div className="services">
+                    <Container>
+                        <div className="services__content">
+                            <div className="services__description">
+                                <div className="services__header">
+                                    <h1>We provide the following services</h1>
                                 </div>
-                                <div className="card__header">Installation</div>
-                                <div className="card__text">
-                                    We will install CCTV cameras at your home,
-                                    work, cottage or just in the yard
+                                <div className="services__text">
+                                    <p>
+                                        In addition, technical support will
+                                        always advise you on any questions, and
+                                        will also carry out remote diagnostics
+                                        of your system upon request and in the
+                                        shortest possible time.
+                                    </p>
                                 </div>
                             </div>
-                            <div className="card">
-                                <div className="card__image">
-                                    <div className="card__image-bg">
-                                        <img src={icon2} alt="not found" />
+                            <div className="services__cards">
+                                <div className="card">
+                                    <div className="card__image">
+                                        <img src={icon1} alt="not found" />
+                                    </div>
+                                    <div className="card__header">
+                                        Installation
+                                    </div>
+                                    <div className="card__text">
+                                        We will install CCTV cameras at your
+                                        home, work, cottage or just in the yard
                                     </div>
                                 </div>
-                                <div className="card__header">Service</div>
-                                <div className="card__text">
-                                    If you have any difficulties, we will give
-                                    advice, and if necessary, we will come to
-                                    your site
-                                </div>
-                            </div>
-                            <div className="card">
-                                <div className="card__image">
-                                    <div className="card__image-bg">
-                                        <img src={icon3} alt="not found" />
+                                <div className="card">
+                                    <div className="card__image">
+                                        <div className="card__image-bg">
+                                            <img src={icon2} alt="not found" />
+                                        </div>
+                                    </div>
+                                    <div className="card__header">Service</div>
+                                    <div className="card__text">
+                                        If you have any difficulties, we will
+                                        give advice, and if necessary, we will
+                                        come to your site
                                     </div>
                                 </div>
-                                <div className="card__header">
-                                    Personal account
-                                </div>
-                                <div className="card__text">
-                                    Watch the broadcast online, and if we don’t
-                                    have time to store the recordings for 7
-                                    days, just go to the archive
+                                <div className="card">
+                                    <div className="card__image">
+                                        <div className="card__image-bg">
+                                            <img src={icon3} alt="not found" />
+                                        </div>
+                                    </div>
+                                    <div className="card__header">
+                                        Personal account
+                                    </div>
+                                    <div className="card__text">
+                                        Watch the broadcast online, and if we
+                                        don’t have time to store the recordings
+                                        for 7 days, just go to the archive
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </Container>
+                    </Container>
+                </div>
+                <div className="mobile-app">
+                    <Container>
+                        <div className="mobile-app__content">
+                            <div className="mobile-app__header">
+                                <h1>
+                                    Download our application in the AppStore and
+                                    Google Play
+                                </h1>
+                            </div>
+                            <div className="mobile-app__list">
+                                <ul>
+                                    <li>
+                                        <p>
+                                            watch online broadcast from your
+                                            video cameras
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            securely store the archive in the
+                                            cloud for 7 days or more
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>get access to the archive online</p>
+                                    </li>
+                                    <li>
+                                        <p>save the archive to your devices</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className="mobile-app__links">
+                                <a href="https://www.google.com">
+                                    <img src={googlePlay} />
+                                </a>
+                                <a href="https://www.google.com">
+                                    <img src={appleStore} />
+                                </a>
+                            </div>
+                            <div className="mobile-app__bg">
+                                <img src={appStoreBg} />
+                            </div>
+                        </div>
+                    </Container>
+                </div>
             </main>
         </div>
     );

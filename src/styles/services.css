@@ -1,4 +1,7 @@
 .services {
+    position: relative;
+}
+.services__content {
     display: flex;
     flex-direction: column;
     height: 935px;
@@ -33,6 +36,7 @@
 .services__cards {
     display: flex;
     justify-content: space-between;
+    margin: 0 0 120px 0;
 }
 .card {
     display: flex;
