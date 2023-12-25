@@ -5,6 +5,7 @@ import "./styles/topbar.css";
 import "./styles/slider.css";
 import "./styles/services.css";
 import "./styles/mobile-app.css";
+import "./styles/tariffs.css";
 import logo from "./img/logo.png";
 import { NavButton } from "./components/UI/buttons/header_buttons/nav_button/NavButton";
 import { LoginButton } from "./components/UI/buttons/header_buttons/login_button/LoginButton";
@@ -21,6 +22,7 @@ import googlePlay from "./img/app-store/GooglePlay.png";
 import appleStore from "./img/app-store/AppleStore.png";
 import appStoreBg from "./img/app-store/app-store_bg.png";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
+import { BlueButton } from "./components/UI/buttons/blue_button/BlueButton";
 
 function App() {
     const [sliderPos, setSliderPos] = useState(0);
@@ -114,9 +116,9 @@ function App() {
                                                 )}
                                             </TransitionGroup>
                                         </div>
-                                        <button className="slider__button">
+                                        <BlueButton>
                                             Submit your application
-                                        </button>
+                                        </BlueButton>
                                     </div>
                                 </div>
                             </div>
@@ -373,6 +375,65 @@ function App() {
                             </div>
                             <div className="mobile-app__bg">
                                 <img src={appStoreBg} />
+                            </div>
+                        </div>
+                    </Container>
+                </div>
+                <div className="tariffs">
+                    <Container>
+                        <div className="tariffs__content">
+                            <div className="tariffs__header">
+                                <h1>Select tariff</h1>
+                            </div>
+                            <div className="tariffs__cards">
+                                <div className="tariffs__card">
+                                    <div className="tariffs__card_header">
+                                        Standart
+                                    </div>
+                                    <div className="tariffs__card_price">
+                                        3 $<span>/ month</span>
+                                    </div>
+                                    <div className="tariffs__card_description">
+                                        Archive recording and storage for 7
+                                        days. Connecting 1 camera. Online access
+                                        to the camera
+                                    </div>
+                                    <BlueButton>
+                                        Submit your application
+                                    </BlueButton>
+                                </div>
+                                <div className="tariffs__card">
+                                    <div className="tariffs__card_header">
+                                        Optimal
+                                    </div>
+                                    <div className="tariffs__card_price">
+                                        7 $<span>/ month</span>
+                                    </div>
+                                    <div className="tariffs__card_description">
+                                        Archive recording and storage for 30
+                                        days. Connecting 1 camera. Online access
+                                        to the camera
+                                    </div>
+                                    <BlueButton>
+                                        Submit your application
+                                    </BlueButton>
+                                </div>
+                                <div className="tariffs__card">
+                                    <div className="tariffs__card_header">
+                                        Business
+                                    </div>
+                                    <div className="tariffs__card_price">
+                                        10 $<span>/ month</span>
+                                    </div>
+                                    <div className="tariffs__card_description">
+                                        Archive recording and storage for 60
+                                        days. Connecting 1 camera. Online access
+                                        to the camera
+                                    </div>
+                                    <BlueButton>
+                                        Submit your application
+                                    </BlueButton>
+                                </div>
                             </div>
                         </div>
                     </Container>

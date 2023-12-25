@@ -1,0 +1,10 @@
+.blueButton {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 110%;
+    padding: 14px 39px;
+    border: 1px solid #386df4;
+    border-radius: 4px;
+    background: #386df4;
+}
