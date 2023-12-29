@@ -6,6 +6,7 @@ import "./styles/slider.css";
 import "./styles/services.css";
 import "./styles/mobile-app.css";
 import "./styles/tariffs.css";
+import "./styles/catalog.css";
 import logo from "./img/logo.png";
 import { NavButton } from "./components/UI/buttons/header_buttons/nav_button/NavButton";
 import { LoginButton } from "./components/UI/buttons/header_buttons/login_button/LoginButton";
@@ -21,6 +22,7 @@ import icon3 from "./img/cards/icon3.png";
 import googlePlay from "./img/app-store/GooglePlay.png";
 import appleStore from "./img/app-store/AppleStore.png";
 import appStoreBg from "./img/app-store/app-store_bg.png";
+import cam from "./img/catalog/cam.png";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { BlueButton } from "./components/UI/buttons/blue_button/BlueButton";
 
@@ -435,6 +437,83 @@ function App() {
                                     </BlueButton>
                                 </div>
                             </div>
+                        </div>
+                    </Container>
+                </div>
+                <div className="catalog">
+                    <Container>
+                        <div className="catalog__content">
+                            <div className="catalog__header">
+                                <h1>Ready-made connectivity solutions</h1>
+                            </div>
+                            <div className="catalog__cards">
+                                <div className="catalog__card">
+                                    <div className="catalog__card_image">
+                                        <img src={cam} />
+                                    </div>
+                                    <div className="catalog__card_tag">
+                                        For home
+                                    </div>
+                                    <div className="catalog__card_description">
+                                        Digital IP camera for connecting to the
+                                        EasyCam cloud service.
+                                    </div>
+                                    <div className="catalog__card_resolution catalog__card_characteristics">
+                                        Resolution: 1920*1080@25fps
+                                    </div>
+                                    <div className="catalog__card_lens catalog__card_characteristics">
+                                        Lens: 2.8mm lens
+                                    </div>
+                                    <div className="catalog__card_guarantee catalog__card_characteristics">
+                                        Guarantee: 1 year
+                                    </div>
+                                </div>
+                                <div className="catalog__card">
+                                    <div className="catalog__card_image">
+                                        <img src={cam} />
+                                    </div>
+                                    <div className="catalog__card_tag">
+                                        For home
+                                    </div>
+                                    <div className="catalog__card_description">
+                                        Digital IP camera for connecting to the
+                                        EasyCam cloud service.
+                                    </div>
+                                    <div className="catalog__card_resolution catalog__card_characteristics">
+                                        Resolution: 1920*1080@25fps
+                                    </div>
+                                    <div className="catalog__card_lens catalog__card_characteristics">
+                                        Lens: 2.8mm lens
+                                    </div>
+                                    <div className="catalog__card_guarantee catalog__card_characteristics">
+                                        Guarantee: 1 year
+                                    </div>
+                                </div>
+                                <div className="catalog__card">
+                                    <div className="catalog__card_image">
+                                        <img src={cam} />
+                                    </div>
+                                    <div className="catalog__card_tag">
+                                        For home
+                                    </div>
+                                    <div className="catalog__card_description">
+                                        Digital IP camera for connecting to the
+                                        EasyCam cloud service.
+                                    </div>
+                                    <div className="catalog__card_resolution catalog__card_characteristics">
+                                        Resolution: 1920*1080@25fps
+                                    </div>
+                                    <div className="catalog__card_lens catalog__card_characteristics">
+                                        Lens: 2.8mm lens
+                                    </div>
+                                    <div className="catalog__card_guarantee catalog__card_characteristics">
+                                        Guarantee: 1 year
+                                    </div>
+                                </div>
+                            </div>
+                            <button className="catalog__to-catalog">
+                                To catalog
+                            </button>
                         </div>
                     </Container>
                 </div>
