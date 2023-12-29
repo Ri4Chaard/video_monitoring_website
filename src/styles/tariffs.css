@@ -10,12 +10,6 @@
 }
 .tariffs__header {
     margin: 120px 0 0 0;
-    font-family: Play;
-}
-.tariffs__header h1 {
-    font-size: 48px;
-    font-weight: 700;
-    line-height: 120%;
 }
 
 .tariffs__cards {
@@ -53,9 +47,6 @@
 }
 .tariffs__card_description {
     margin: 20px 0 0 0;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 150%;
     flex: 1 1 auto;
 }
 .tariffs__card button {

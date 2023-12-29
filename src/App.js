@@ -1,6 +1,7 @@
 import { Container } from "./components/UI/container/Container";
 import "./styles/App.css";
 import "./styles/nullstyle.css";
+import "./styles/text-styles.css";
 import "./styles/topbar.css";
 import "./styles/slider.css";
 import "./styles/services.css";
@@ -73,7 +74,7 @@ function App() {
                     <div className="slider">
                         <div className="slider__items">
                             <div className="slider__text">
-                                <div className="slider__header">
+                                <div className="slider__header header">
                                     <TransitionGroup component={null}>
                                         {slides.map(
                                             (slide, index) =>
@@ -278,10 +279,10 @@ function App() {
                     <Container>
                         <div className="services__content">
                             <div className="services__description">
-                                <div className="services__header">
+                                <div className="services__header header">
                                     <h1>We provide the following services</h1>
                                 </div>
-                                <div className="services__text">
+                                <div className="services__text main-text">
                                     <p>
                                         In addition, technical support will
                                         always advise you on any questions, and
@@ -299,7 +300,7 @@ function App() {
                                     <div className="card__header">
                                         Installation
                                     </div>
-                                    <div className="card__text">
+                                    <div className="card__text secondary-text">
                                         We will install CCTV cameras at your
                                         home, work, cottage or just in the yard
                                     </div>
@@ -311,7 +312,7 @@ function App() {
                                         </div>
                                     </div>
                                     <div className="card__header">Service</div>
-                                    <div className="card__text">
+                                    <div className="card__text secondary-text">
                                         If you have any difficulties, we will
                                         give advice, and if necessary, we will
                                         come to your site
@@ -326,7 +327,7 @@ function App() {
                                     <div className="card__header">
                                         Personal account
                                     </div>
-                                    <div className="card__text">
+                                    <div className="card__text secondary-text">
                                         Watch the broadcast online, and if we
                                         don’t have time to store the recordings
                                         for 7 days, just go to the archive
@@ -339,13 +340,13 @@ function App() {
                 <div className="mobile-app">
                     <Container>
                         <div className="mobile-app__content">
-                            <div className="mobile-app__header">
+                            <div className="mobile-app__header header">
                                 <h1>
                                     Download our application in the AppStore and
                                     Google Play
                                 </h1>
                             </div>
-                            <div className="mobile-app__list">
+                            <div className="mobile-app__list main-text">
                                 <ul>
                                     <li>
                                         <p>
@@ -384,7 +385,7 @@ function App() {
                 <div className="tariffs">
                     <Container>
                         <div className="tariffs__content">
-                            <div className="tariffs__header">
+                            <div className="tariffs__header header">
                                 <h1>Select tariff</h1>
                             </div>
                             <div className="tariffs__cards">
@@ -395,7 +396,7 @@ function App() {
                                     <div className="tariffs__card_price">
                                         3 $<span>/ month</span>
                                     </div>
-                                    <div className="tariffs__card_description">
+                                    <div className="tariffs__card_description secondary-text">
                                         Archive recording and storage for 7
                                         days. Connecting 1 camera. Online access
                                         to the camera
@@ -411,7 +412,7 @@ function App() {
                                     <div className="tariffs__card_price">
                                         7 $<span>/ month</span>
                                     </div>
-                                    <div className="tariffs__card_description">
+                                    <div className="tariffs__card_description secondary-text">
                                         Archive recording and storage for 30
                                         days. Connecting 1 camera. Online access
                                         to the camera
@@ -427,7 +428,7 @@ function App() {
                                     <div className="tariffs__card_price">
                                         10 $<span>/ month</span>
                                     </div>
-                                    <div className="tariffs__card_description">
+                                    <div className="tariffs__card_description secondary-text">
                                         Archive recording and storage for 60
                                         days. Connecting 1 camera. Online access
                                         to the camera
@@ -443,7 +444,7 @@ function App() {
                 <div className="catalog">
                     <Container>
                         <div className="catalog__content">
-                            <div className="catalog__header">
+                            <div className="catalog__header header">
                                 <h1>Ready-made connectivity solutions</h1>
                             </div>
                             <div className="catalog__cards">
@@ -458,13 +459,13 @@ function App() {
                                         Digital IP camera for connecting to the
                                         EasyCam cloud service.
                                     </div>
-                                    <div className="catalog__card_resolution catalog__card_characteristics">
+                                    <div className="catalog__card_resolution secondary-text">
                                         Resolution: 1920*1080@25fps
                                     </div>
-                                    <div className="catalog__card_lens catalog__card_characteristics">
+                                    <div className="catalog__card_lens secondary-text">
                                         Lens: 2.8mm lens
                                     </div>
-                                    <div className="catalog__card_guarantee catalog__card_characteristics">
+                                    <div className="catalog__card_guarantee secondary-text">
                                         Guarantee: 1 year
                                     </div>
                                 </div>

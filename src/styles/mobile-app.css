@@ -11,19 +11,8 @@
     max-width: 700px;
     margin: 0 0 50px 0;
 }
-.mobile-app__header h1 {
-    font-size: 48px;
-    font-family: Play;
-    font-style: normal;
-    font-weight: 700px;
-    line-height: 110%;
-}
 
 .mobile-app__list {
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 140%;
     margin: 0 0 41px 0;
 }
 
