@@ -5,6 +5,13 @@
     font-weight: 700;
     line-height: 110%;
 }
+.subheader {
+    font-family: Play;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+}
 .main-text {
     font-size: 18px;
     font-style: normal;
@@ -16,4 +23,45 @@
     font-style: normal;
     font-weight: 500;
     line-height: 150%;
+}
+.blue-tag {
+    color: #fff;
+    font-size: 12px;
+    line-height: 150%;
+    font-weight: 500;
+    padding: 0 8px;
+    background-color: #384e85;
+    border-radius: 10px;
+}
+
+.to-smth-btn {
+    position: relative;
+    align-self: flex-end;
+    font-size: 18px;
+    padding: 0 40px 0 0;
+    font-weight: 600;
+    line-height: 110%;
+    color: #4466fb;
+    background: none;
+}
+
+.to-smth-btn::before {
+    content: "";
+    position: absolute;
+    top: 60%;
+    right: 3px;
+    rotate: -45deg;
+    height: 3px;
+    width: 13px;
+    background: #4466fb;
+}
+.to-smth-btn::after {
+    content: "";
+    position: absolute;
+    top: 23%;
+    right: 3px;
+    rotate: 45deg;
+    height: 3px;
+    width: 13px;
+    background: #4466fb;
 }

@@ -34,14 +34,7 @@
 }
 .catalog__card_tag {
     align-self: flex-start;
-    color: #fff;
     margin: 10px 0 0 0;
-    font-size: 12px;
-    line-height: 150%;
-    font-weight: 500;
-    padding: 0 8px;
-    background-color: #384e85;
-    border-radius: 10px;
 }
 .catalog__card_description {
     margin: 23px 0 0 0;
@@ -63,34 +56,5 @@
 }
 
 .catalog__to-catalog {
-    position: relative;
     margin: 40px 0 100px 0;
-    padding: 0 40px 0 0;
-    align-self: flex-end;
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 110%;
-    color: #4466fb;
-    background: none;
-}
-
-.catalog__to-catalog::before {
-    content: "";
-    position: absolute;
-    top: 60%;
-    right: 3px;
-    rotate: -45deg;
-    height: 3px;
-    width: 13px;
-    background: #4466fb;
-}
-.catalog__to-catalog::after {
-    content: "";
-    position: absolute;
-    top: 23%;
-    right: 3px;
-    rotate: 45deg;
-    height: 3px;
-    width: 13px;
-    background: #4466fb;
 }

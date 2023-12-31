@@ -8,10 +8,11 @@ import "./styles/services.css";
 import "./styles/mobile-app.css";
 import "./styles/tariffs.css";
 import "./styles/catalog.css";
+import "./styles/news.css";
 import logo from "./img/logo.png";
 import { NavButton } from "./components/UI/buttons/header_buttons/nav_button/NavButton";
 import { LoginButton } from "./components/UI/buttons/header_buttons/login_button/LoginButton";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import slide1 from "./img/slider/slide1.png";
 import slide2 from "./img/slider/slide2.png";
 import slide3 from "./img/slider/slide3.png";
@@ -24,12 +25,16 @@ import googlePlay from "./img/app-store/GooglePlay.png";
 import appleStore from "./img/app-store/AppleStore.png";
 import appStoreBg from "./img/app-store/app-store_bg.png";
 import cam from "./img/catalog/cam.png";
+import newsImage from "./img/news/news-image.png";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { BlueButton } from "./components/UI/buttons/blue_button/BlueButton";
 
 function App() {
     const [sliderPos, setSliderPos] = useState(0);
+    const [selectedPost, setSelectedPost] = useState(null);
     const nodeRef = useRef(null);
+    const textRefs = useRef([]);
+
     const slides = [
         {
             header: "Cloud video surveillance for your purposes",
@@ -47,10 +52,141 @@ function App() {
             slide: slide3,
         },
     ];
+    const posts = [
+        {
+            date: "07.02.23",
+            image: (
+                <div
+                    style={{
+                        position: "absolute",
+                        display: "flex",
+                        flexDirection: "column",
+                        marginTop: "19px",
+                    }}
+                >
+                    <div style={{ display: "flex" }}>
+                        <img src={newsImage} style={{ marginRight: "27px" }} />
+                        <img src={newsImage} />
+                    </div>
+                    <div
+                        style={{
+                            display: "flex",
+                            justifyContent: "space-around",
+                        }}
+                    >
+                        <a href="https://www.google.com">
+                            <img
+                                src={googlePlay}
+                                style={{
+                                    display: "inline-block",
+                                    maxWidth: "80px",
+                                    marginRight: "27px",
+                                }}
+                            />
+                        </a>
+                        <a href="https://www.google.com">
+                            <img
+                                src={appleStore}
+                                style={{
+                                    display: "inline-block",
+                                    maxWidth: "80px",
+                                }}
+                            />
+                        </a>
+                    </div>
+                </div>
+            ),
+            title: (
+                <div className="news__title subheader">
+                    Launch of the mobile application
+                </div>
+            ),
+            content: (
+                <div className="news__description secondary-text">
+                    <p>
+                        Since today our service has become even more convenient
+                        thanks to iOS and Android applications.
+                    </p>
+                    <p>
+                        The application is available for existing, registered
+                        customers. To connect your cameras, leave an
+                        application.
+                    </p>
+                    <p>
+                        You can also use the demo cabinet to evaluate the
+                        service and applications. Just contact us.
+                    </p>
+                    <p>
+                        <b>Functionality</b> of the application: <b>1.</b>
+                        Playback back in archive mode. <b>2.</b> Fast rewind in
+                        +/- 10 sec. by double-tapping the screen
+                    </p>
+                </div>
+            ),
+            previewContent: (
+                <div className="news__description secondary-text">
+                    <p>
+                        Since today our service has become even more convenient
+                        thanks to iOS and Android ...
+                    </p>
+                </div>
+            ),
+        },
+        {
+            date: "07.02.23",
+            image: null,
+            title: <div className="news__title subheader">Some title here</div>,
+            content: (
+                <div className="news__description secondary-text">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Officia omnis accusamus quidem esse, sed molestias
+                        consequatur at ipsa hic expedita?
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Officia omnis accusamus quidem esse, sed molestias
+                        consequatur at ipsa hic expedita?
+                    </p>
+                </div>
+            ),
+            previewContent: (
+                <div className="news__description secondary-text">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Officia omnis accusamus ...
+                    </p>
+                </div>
+            ),
+        },
+        {
+            date: "07.02.23",
+            image: null,
+            title: <div className="news__title subheader">Some title here</div>,
+            content: (
+                <div className="news__description secondary-text">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Officia omnis accusamus quidem esse, sed molestias
+                        consequatur at ipsa hic expedita?
+                    </p>
+                </div>
+            ),
+            previewContent: (
+                <div className="news__description secondary-text">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Officia omnis accusamus ...
+                    </p>
+                </div>
+            ),
+        },
+    ];
 
     const moveSlider = (x) => {
         setSliderPos(sliderPos + x);
     };
+
     return (
         <div className="App">
             <header>
@@ -390,7 +526,7 @@ function App() {
                             </div>
                             <div className="tariffs__cards">
                                 <div className="tariffs__card">
-                                    <div className="tariffs__card_header">
+                                    <div className="tariffs__card_header subheader">
                                         Standart
                                     </div>
                                     <div className="tariffs__card_price">
@@ -406,7 +542,7 @@ function App() {
                                     </BlueButton>
                                 </div>
                                 <div className="tariffs__card">
-                                    <div className="tariffs__card_header">
+                                    <div className="tariffs__card_header subheader">
                                         Optimal
                                     </div>
                                     <div className="tariffs__card_price">
@@ -422,7 +558,7 @@ function App() {
                                     </BlueButton>
                                 </div>
                                 <div className="tariffs__card">
-                                    <div className="tariffs__card_header">
+                                    <div className="tariffs__card_header subheader">
                                         Business
                                     </div>
                                     <div className="tariffs__card_price">
@@ -452,7 +588,7 @@ function App() {
                                     <div className="catalog__card_image">
                                         <img src={cam} />
                                     </div>
-                                    <div className="catalog__card_tag">
+                                    <div className="catalog__card_tag blue-tag">
                                         For home
                                     </div>
                                     <div className="catalog__card_description">
@@ -473,7 +609,7 @@ function App() {
                                     <div className="catalog__card_image">
                                         <img src={cam} />
                                     </div>
-                                    <div className="catalog__card_tag">
+                                    <div className="catalog__card_tag blue-tag">
                                         For home
                                     </div>
                                     <div className="catalog__card_description">
@@ -494,7 +630,7 @@ function App() {
                                     <div className="catalog__card_image">
                                         <img src={cam} />
                                     </div>
-                                    <div className="catalog__card_tag">
+                                    <div className="catalog__card_tag blue-tag">
                                         For home
                                     </div>
                                     <div className="catalog__card_description">
@@ -512,8 +648,90 @@ function App() {
                                     </div>
                                 </div>
                             </div>
-                            <button className="catalog__to-catalog">
+                            <button className="catalog__to-catalog to-smth-btn">
                                 To catalog
+                            </button>
+                        </div>
+                    </Container>
+                </div>
+                <div className="news">
+                    <Container>
+                        <div className="news__content">
+                            <div className="news__header header">
+                                <h1>Company's news</h1>
+                            </div>
+                            <div className="news__posts">
+                                {posts.map((post, index) => (
+                                    <div className="news__post" key={index}>
+                                        <div
+                                            className="news__image"
+                                            style={
+                                                selectedPost == index &&
+                                                post.image
+                                                    ? {
+                                                          opacity: 1,
+                                                          minHeight: "300px",
+                                                      }
+                                                    : { opacity: 0 }
+                                            }
+                                        >
+                                            {post.image}
+                                        </div>
+                                        <div
+                                            className="news__text"
+                                            onClick={() => {
+                                                selectedPost == index
+                                                    ? setSelectedPost(null)
+                                                    : setSelectedPost(index);
+                                            }}
+                                            style={
+                                                selectedPost == index
+                                                    ? {
+                                                          borderTop:
+                                                              "1px solid rgba(0, 0, 0, 1)",
+                                                      }
+                                                    : {
+                                                          borderTop:
+                                                              "1px solid rgba(0, 0, 0, 0.2)",
+                                                      }
+                                            }
+                                        >
+                                            {post.title}
+                                            <div
+                                                className="news__text-content"
+                                                ref={(el) =>
+                                                    (textRefs.current[index] =
+                                                        el)
+                                                }
+                                            >
+                                                <div
+                                                    className="news__date"
+                                                    style={
+                                                        selectedPost == index
+                                                            ? {
+                                                                  borderRight:
+                                                                      "1px solid rgba(0, 0, 0, 1)",
+                                                              }
+                                                            : {
+                                                                  borderRight:
+                                                                      "1px solid rgba(0, 0, 0, 0.2)",
+                                                              }
+                                                    }
+                                                >
+                                                    <div className="blue-tag">
+                                                        {post.date}
+                                                    </div>
+                                                </div>
+                                                {selectedPost == index
+                                                    ? post.content
+                                                    : post.previewContent}
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                            <button className="news__to-news to-smth-btn">
+                                View all
                             </button>
                         </div>
                     </Container>

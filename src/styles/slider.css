@@ -25,6 +25,9 @@
     color: #fff;
     margin: 0 0 77px 0;
 }
+.slider__header h1 {
+    position: absolute;
+}
 
 .slider__description {
     display: flex;
