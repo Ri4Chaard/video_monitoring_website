@@ -134,7 +134,15 @@ function App() {
         },
         {
             date: "07.02.23",
-            image: null,
+            image: (
+                <img
+                    style={{
+                        position: "absolute",
+                        marginTop: "19px",
+                    }}
+                    src={newsImage}
+                />
+            ),
             title: <div className="news__title subheader">Some title here</div>,
             content: (
                 <div className="news__description secondary-text">
@@ -670,9 +678,13 @@ function App() {
                                                 post.image
                                                     ? {
                                                           opacity: 1,
+                                                          left: "0",
                                                           minHeight: "300px",
                                                       }
-                                                    : { opacity: 0 }
+                                                    : {
+                                                          opacity: 0,
+                                                          left: "-200px",
+                                                      }
                                             }
                                         >
                                             {post.image}
