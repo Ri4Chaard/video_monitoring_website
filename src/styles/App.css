@@ -22,3 +22,7 @@ main {
     flex: 1 0 100%;
     flex-direction: column;
 }
+footer {
+    min-height: 372px;
+    background-image: url(/src/img/footer_background.png);
+}

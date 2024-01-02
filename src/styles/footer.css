@@ -1,0 +1,92 @@
+.footer {
+    position: relative;
+}
+.footer__items {
+    display: flex;
+    color: #fff;
+    margin: 70px 0;
+    justify-content: space-between;
+}
+
+.footer__header {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 130%;
+    margin: 0 0 20px 0;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 300px;
+    margin: 0 30px 0 0;
+}
+.contacts__number {
+    margin: 0 0 10px 0;
+}
+.contacts__download {
+    color: #53acff;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 130%;
+    background: none;
+    margin: 0 0 20px 0;
+}
+.contacts__app-stores {
+    display: flex;
+    margin: 0 0 33px 0;
+}
+.contacts__app-stores img {
+    width: 123px;
+    margin: 0 8px 0 0;
+}
+.contacts__copyright {
+    color: #fff;
+    opacity: 0.2;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 130%;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    margin: 0 30px 0 0;
+}
+.links__items {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 130%;
+}
+.links__items li {
+    margin: 0 0 10px 0;
+}
+.links__items li:last-child {
+    margin: 0;
+}
+.links__items a:visited {
+    color: #fff;
+}
+
+.request {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 400px;
+}
+.request form {
+    display: flex;
+    flex-direction: column;
+}
+.request form input {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 155%;
+    padding: 18px 16px;
+    border-radius: 4px;
+    margin: 0 0 5px 0;
+}
+.request form input:nth-child(2) {
+    margin: 0 0 10px 0;
+}

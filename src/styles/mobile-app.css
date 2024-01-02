@@ -35,6 +35,7 @@
 }
 .mobile-app__links img {
     width: 121px;
+    margin: 0 10px 0 0;
 }
 .mobile-app__bg {
     position: absolute;
