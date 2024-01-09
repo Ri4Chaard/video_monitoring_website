@@ -2,7 +2,6 @@ import { Container } from "./components/UI/container/Container";
 import "./styles/App.css";
 import "./styles/nullstyle.css";
 import "./styles/text-styles.css";
-import "./styles/topbar.css";
 import "./styles/slider.css";
 import "./styles/services.css";
 import "./styles/mobile-app.css";
@@ -10,9 +9,6 @@ import "./styles/tariffs.css";
 import "./styles/catalog.css";
 import "./styles/news.css";
 import "./styles/footer.css";
-import logo from "./img/logo.png";
-import { NavButton } from "./components/UI/buttons/header_buttons/nav_button/NavButton";
-import { LoginButton } from "./components/UI/buttons/header_buttons/login_button/LoginButton";
 import { useRef, useState } from "react";
 import slide1 from "./img/slider/slide1.png";
 import slide2 from "./img/slider/slide2.png";
@@ -29,6 +25,7 @@ import cam from "./img/catalog/cam.png";
 import newsImage from "./img/news/news-image.png";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { BlueButton } from "./components/UI/buttons/blue_button/BlueButton";
+import { Topbar } from "./components/Topbar";
 
 function App() {
     const [sliderPos, setSliderPos] = useState(0);
@@ -201,22 +198,7 @@ function App() {
         <div className="App">
             <header>
                 <Container>
-                    <div className="topbar">
-                        <div className="topbar__logo">
-                            <img className="logo" src={logo} alt="logo" />
-                        </div>
-                        <nav className="topbar__menu">
-                            <NavButton style={{ fontWeight: "500" }}>
-                                Ready solutions
-                            </NavButton>
-                            <NavButton>Tariffs</NavButton>
-                            <NavButton>News</NavButton>
-                            <NavButton>Contacts</NavButton>
-                        </nav>
-                        <div className="topbar__login">
-                            <LoginButton>Login</LoginButton>
-                        </div>
-                    </div>
+                    <Topbar />
                     <div className="slider">
                         <div className="slider__items">
                             <div className="slider__text">
