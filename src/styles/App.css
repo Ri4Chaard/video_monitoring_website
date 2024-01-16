@@ -5,7 +5,7 @@ body {
     font-family: "Montserrat", sans-serif;
 }
 
-.App {
+#root {
     display: flex;
     flex-direction: column;
     min-height: 100%;
@@ -13,9 +13,8 @@ body {
 }
 
 header {
-    min-height: 748px;
-    background-image: url(/src/img/background.png);
-    background-position: center;
+    position: absolute;
+    width: 100%;
 }
 main {
     display: flex;
