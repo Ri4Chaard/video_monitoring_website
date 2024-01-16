@@ -2,6 +2,7 @@ import { Container } from "./components/UI/container/Container";
 import "./styles/App.css";
 import "./styles/nullstyle.css";
 import "./styles/text-styles.css";
+import "./styles/topbar.css";
 import "./styles/slider.css";
 import "./styles/services.css";
 import "./styles/mobile-app.css";
@@ -15,85 +16,91 @@ import { BlueButton } from "./components/UI/buttons/blue_button/BlueButton";
 import { Topbar } from "./components/Topbar";
 import { AppRouter } from "./components/AppRouter";
 import { BrowserRouter } from "react-router-dom";
+import { useState } from "react";
+import { PageContext } from "./components/context";
 
 function App() {
+    const [currentPage, setCurrentPage] = useState(0);
+
     return (
-        <BrowserRouter>
-            <header>
-                <Container>
-                    <Topbar />
-                </Container>
-            </header>
-            <AppRouter />
-            <footer>
-                <Container>
-                    <div className="footer">
-                        <div className="footer__items">
-                            <div className="contacts">
-                                <div className="contacts__header footer__header">
-                                    Contacts
+        <PageContext.Provider value={{ currentPage, setCurrentPage }}>
+            <BrowserRouter>
+                <header>
+                    <Container>
+                        <Topbar />
+                    </Container>
+                </header>
+                <AppRouter />
+                <footer>
+                    <Container>
+                        <div className="footer">
+                            <div className="footer__items">
+                                <div className="contacts">
+                                    <div className="contacts__header footer__header">
+                                        Contacts
+                                    </div>
+                                    <div className="contacts__number">
+                                        +1234-456-67-89
+                                    </div>
+                                    <button className="contacts__download">
+                                        Download details
+                                    </button>
+                                    <div className="contacts__app-stores">
+                                        <a href="https://www.google.com">
+                                            <img src={googlePlay} />
+                                        </a>
+                                        <a href="https://www.google.com">
+                                            <img src={appleStore} />
+                                        </a>
+                                    </div>
+                                    <div className="contacts__copyright">
+                                        Copyright © 2013 - 2024 EASYCAM - cloud
+                                        video surveillance
+                                    </div>
                                 </div>
-                                <div className="contacts__number">
-                                    +1234-456-67-89
+                                <div className="links">
+                                    <div className="links__header footer__header">
+                                        Useful links
+                                    </div>
+                                    <ul className="links__items">
+                                        <li>
+                                            <a href="">Home</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Our services</a>
+                                        </li>
+                                        <li>
+                                            <a href=""> Tariffs</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Ready solutions</a>
+                                        </li>
+                                        <li>
+                                            <a href="">News</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Account</a>
+                                        </li>
+                                    </ul>
                                 </div>
-                                <button className="contacts__download">
-                                    Download details
-                                </button>
-                                <div className="contacts__app-stores">
-                                    <a href="https://www.google.com">
-                                        <img src={googlePlay} />
-                                    </a>
-                                    <a href="https://www.google.com">
-                                        <img src={appleStore} />
-                                    </a>
+                                <div className="request">
+                                    <div className="request__header footer__header">
+                                        Leave a request for connection
+                                    </div>
+                                    <form>
+                                        <input placeholder="Your phone number" />
+                                        <input placeholder="Your name" />
+                                        <BlueButton type="submit">
+                                            Leave a request
+                                        </BlueButton>
+                                    </form>
                                 </div>
-                                <div className="contacts__copyright">
-                                    Copyright © 2013 - 2024 EASYCAM - cloud
-                                    video surveillance
-                                </div>
-                            </div>
-                            <div className="links">
-                                <div className="links__header footer__header">
-                                    Useful links
-                                </div>
-                                <ul className="links__items">
-                                    <li>
-                                        <a href="">Home</a>
-                                    </li>
-                                    <li>
-                                        <a href="">Our services</a>
-                                    </li>
-                                    <li>
-                                        <a href=""> Tariffs</a>
-                                    </li>
-                                    <li>
-                                        <a href="">Ready solutions</a>
-                                    </li>
-                                    <li>
-                                        <a href="">News</a>
-                                    </li>
-                                    <li>
-                                        <a href="">Account</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div className="request">
-                                <div className="request__header footer__header">
-                                    Leave a request for connection
-                                </div>
-                                <form>
-                                    <input placeholder="Your phone number" />
-                                    <input placeholder="Your name" />
-                                    <BlueButton type="submit">
-                                        Leave a request
-                                    </BlueButton>
-                                </form>
                             </div>
                         </div>
-                    </div>
-                </Container>
-            </footer>
-        </BrowserRouter>
+                    </Container>
+                </footer>
+            </BrowserRouter>
+        </PageContext.Provider>
     );
 }
 

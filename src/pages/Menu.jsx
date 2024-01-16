@@ -1,15 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Container } from "../components/UI/container/Container";
-import "../styles/App.css";
-import "../styles/nullstyle.css";
-import "../styles/text-styles.css";
-import "../styles/slider.css";
-import "../styles/services.css";
-import "../styles/mobile-app.css";
-import "../styles/tariffs.css";
-import "../styles/catalog.css";
-import "../styles/news.css";
-import "../styles/footer.css";
 import { useRef, useState } from "react";
 import slide1 from "../img/slider/slide1.png";
 import slide2 from "../img/slider/slide2.png";
@@ -27,10 +17,12 @@ import newsImage from "../img/news/news-image.png";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { BlueButton } from "../components/UI/buttons/blue_button/BlueButton";
 import { Link } from "react-router-dom";
+import { PageContext } from "../components/context";
 
 export const Menu = () => {
     const [sliderPos, setSliderPos] = useState(0);
     const [selectedPost, setSelectedPost] = useState(null);
+    const { currentPage, setCurrentPage } = useContext(PageContext);
     const nodeRef = useRef(null);
     const textRefs = useRef([]);
 
@@ -636,6 +628,7 @@ export const Menu = () => {
                             key="/catalog"
                             to="/catalog"
                             className="catalog__to-catalog to-smth-btn"
+                            onClick={() => setCurrentPage(1)}
                         >
                             To catalog
                         </Link>

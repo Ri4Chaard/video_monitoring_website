@@ -1,14 +1,13 @@
-import React, { useEffect, useState } from "react";
-import "../styles/topbar.css";
+import React, { useContext, useEffect, useState } from "react";
 import logo from "../img/logo.png";
 import { NavButton } from "../components/UI/buttons/header_buttons/nav_button/NavButton";
 import { LoginButton } from "../components/UI/buttons/header_buttons/login_button/LoginButton";
 import { Link } from "react-router-dom";
+import { PageContext } from "./context";
 
 export const Topbar = () => {
     const [windowHeight, setWindowHeight] = useState(0);
-    const [fixed, setFixed] = useState(false);
-    const [currentPage, setCurrentPage] = useState(0);
+    const { currentPage, setCurrentPage } = useContext(PageContext);
 
     useEffect(() => {
         const setFixed = () => {
@@ -20,20 +19,27 @@ export const Topbar = () => {
 
     return (
         <div
-            className={windowHeight >= 748 || fixed ? "topbar fixed" : "topbar"}
+            className={
+                windowHeight >= 748 || currentPage != 0
+                    ? "topbar fixed"
+                    : "topbar"
+            }
         >
             <div
                 className={
-                    windowHeight >= 748 || fixed
+                    windowHeight >= 748 || currentPage != 0
                         ? "topbar__content "
                         : "topbar__content whiteBtn"
                 }
                 style={
                     windowHeight >= 81
                         ? {
-                              top: windowHeight >= 748 || fixed ? 16 : -100,
+                              top:
+                                  windowHeight >= 748 || currentPage != 0
+                                      ? 16
+                                      : -100,
                               position:
-                                  windowHeight >= 81 || fixed
+                                  windowHeight >= 81 || currentPage != 0
                                       ? "fixed"
                                       : "relative",
                           }
@@ -47,7 +53,6 @@ export const Topbar = () => {
                             src={logo}
                             alt="logo"
                             onClick={() => {
-                                setFixed(false);
                                 setCurrentPage(0);
                             }}
                         />
@@ -61,7 +66,6 @@ export const Topbar = () => {
                                 color: currentPage == 1 ? "#5C17CD" : "",
                             }}
                             onClick={() => {
-                                setFixed(true);
                                 setCurrentPage(1);
                             }}
                         >
