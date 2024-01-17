@@ -591,13 +591,13 @@ export const Menu = () => {
                                     Digital IP camera for connecting to the
                                     EasyCam cloud service.
                                 </div>
-                                <div className="catalog__card_resolution catalog__card_characteristics">
+                                <div className="catalog__card_resolution secondary-text">
                                     Resolution: 1920*1080@25fps
                                 </div>
-                                <div className="catalog__card_lens catalog__card_characteristics">
+                                <div className="catalog__card_lens secondary-text">
                                     Lens: 2.8mm lens
                                 </div>
-                                <div className="catalog__card_guarantee catalog__card_characteristics">
+                                <div className="catalog__card_guarantee secondary-text">
                                     Guarantee: 1 year
                                 </div>
                             </div>
@@ -612,18 +612,17 @@ export const Menu = () => {
                                     Digital IP camera for connecting to the
                                     EasyCam cloud service.
                                 </div>
-                                <div className="catalog__card_resolution catalog__card_characteristics">
+                                <div className="catalog__card_resolution secondary-text">
                                     Resolution: 1920*1080@25fps
                                 </div>
-                                <div className="catalog__card_lens catalog__card_characteristics">
+                                <div className="catalog__card_lens secondary-text">
                                     Lens: 2.8mm lens
                                 </div>
-                                <div className="catalog__card_guarantee catalog__card_characteristics">
+                                <div className="catalog__card_guarantee secondary-text">
                                     Guarantee: 1 year
                                 </div>
                             </div>
                         </div>
-
                         <Link
                             key="/catalog"
                             to="/catalog"

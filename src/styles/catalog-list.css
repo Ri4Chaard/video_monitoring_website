@@ -1,0 +1,117 @@
+.catalog-list {
+    margin: 150px 0 0 0;
+    position: relative;
+}
+.catalog-list__content {
+    display: flex;
+    flex-direction: column;
+}
+.catalog-list__header {
+    margin: 0 0 50px 0;
+}
+
+.catalog-list__item {
+    display: flex;
+    flex-direction: column;
+    padding: 25px 0 0 0;
+    position: relative;
+}
+.catalog-list__item-content {
+    display: flex;
+    justify-content: space-between;
+}
+.catalog-list__photos {
+    flex: 0 1 435px;
+    display: flex;
+    flex-direction: column;
+}
+.catalog-list__main-photo {
+    position: relative;
+    display: flex;
+    height: 248px;
+    margin: 0 0 10px 0;
+}
+.catalog-list__main-photo img {
+    /* position: absolute; */
+    width: 435px;
+    height: 248px;
+    object-fit: cover;
+}
+.catalog-list__photo-list {
+    display: flex;
+    position: relative;
+    height: 68px;
+    justify-content: space-between;
+    opacity: 0.5;
+}
+.catalog-list__photo-list img {
+    /* position: absolute; */
+    width: 80px;
+    height: 68px;
+    cursor: pointer;
+}
+.catalog-list__set-stream {
+    font-weight: 500;
+    line-height: 110%;
+    text-decoration: underline;
+    align-self: flex-start;
+    background: none;
+    margin: 10px 0 0 0;
+}
+
+.catalog-list__text-block {
+    flex: 0 1 665px;
+}
+.catalog-list__name {
+    margin: 0 0 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 140%;
+}
+
+.catalog-list__text-block_double {
+    display: flex;
+    justify-content: space-between;
+}
+.catalog-list__characteristics {
+    flex: 0 1 270px;
+}
+.catalog-list__characteristics span {
+    opacity: 0.7;
+}
+.catalog-list__characteristics p:first-child {
+    margin: 0 0 8px 0;
+}
+.catalog-list__characteristics p {
+    margin: 0 0 6px 0;
+}
+.catalog-list__characteristics p:last-child {
+    margin: 0;
+}
+
+.catalog-list__description {
+    flex: 0 1 373px;
+}
+.catalog-list__description p:first-child {
+    margin: 0 0 8px 0;
+}
+.catalog-list__description p:last-child {
+    opacity: 0.7;
+}
+
+.catalog-list__purchaseBtn {
+    align-self: flex-end;
+    margin: 20px 0 25px 0;
+}
+
+/* lines */
+.catalog-list__line {
+    display: block;
+    position: absolute;
+    /* height: 1px; */
+    border-top: 1px solid #000;
+    width: 150%;
+    opacity: 0.2;
+    margin: 0 0 25px 0;
+    top: 0;
+}

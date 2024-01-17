@@ -3,6 +3,7 @@ import "./styles/App.css";
 import "./styles/nullstyle.css";
 import "./styles/text-styles.css";
 import "./styles/topbar.css";
+import "./styles/catalog-list.css";
 import "./styles/slider.css";
 import "./styles/services.css";
 import "./styles/mobile-app.css";
