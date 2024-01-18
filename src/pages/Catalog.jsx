@@ -1,39 +1,11 @@
 import React, { useState } from "react";
 import { Container } from "../components/UI/container/Container";
-import vidPrev from "../img/catalog/photos/vid-prev.jpg";
-import photo1 from "../img/catalog/photos/photo1.jpg";
-import photo2 from "../img/catalog/photos/photo2.jpg";
-import photo3 from "../img/catalog/photos/photo3.jpg";
-import photo4 from "../img/catalog/photos/photo4.jpg";
-import photo5 from "../img/catalog/photos/photo5.jpg";
 import { BlueButton } from "../components/UI/buttons/blue_button/BlueButton";
+import { solutions } from "../solutions";
 
 export const Catalog = () => {
     const [broadcast, setBroadcast] = useState(false);
-    const [currentPhoto, setCurrentPhoto] = useState(photo1);
-
-    const solutions = [
-        {
-            characteristics: {
-                model: "Ecam201",
-                resolution1: "2MP 1280*1080P",
-                chipset: "Mstar313e+sc2235",
-                resoluiton2: "1920*1080@25fps",
-                lens: "2.8mm lens",
-                ir: "12pcs/20M",
-                material: "Metal",
-                power: "DC1V/1A, PoE",
-                waterproof: "IP66",
-                warranty: "1 year",
-                type: "Digital camera",
-                tech: "Network IP",
-            },
-            description:
-                "The camera has a metal housing that allows you to use for installation both outdoors and indoors. The camera has a built-in microphone. The camera can be connected to a video recorder for local archiving and to a cloud service.",
-            translation: vidPrev,
-            images: [photo1, photo2, photo3, photo4, photo5],
-        },
-    ];
+    const [currentPhoto, setCurrentPhoto] = useState(solutions[0].images[2]);
 
     return (
         <main>
@@ -45,54 +17,34 @@ export const Catalog = () => {
                         </div>
                         <div className="catalog-list__item">
                             <div className="catalog-list__item-content">
-                                {/* <span className="catalog-list__line"></span> */}
                                 <div className="catalog-list__photos">
                                     <div className="catalog-list__main-photo">
                                         <img
                                             src={
                                                 broadcast
-                                                    ? vidPrev
+                                                    ? solutions[0].translation
                                                     : currentPhoto
                                             }
                                             alt="Image not found"
                                         />
                                     </div>
                                     <div className="catalog-list__photo-list">
-                                        <img
-                                            src={photo2}
-                                            alt="Image not found"
-                                            onClick={() => {
-                                                setCurrentPhoto(photo2);
-                                            }}
-                                        />
-                                        <img
-                                            src={photo3}
-                                            alt="Image not found"
-                                            onClick={() => {
-                                                setCurrentPhoto(photo3);
-                                            }}
-                                        />
-                                        <img
-                                            src={photo1}
-                                            alt="Image not found"
-                                            onClick={() => {
-                                                setCurrentPhoto(photo1);
-                                            }}
-                                        />
-                                        <img
-                                            src={photo4}
-                                            alt="Image not found"
-                                            onClick={() => {
-                                                setCurrentPhoto(photo4);
-                                            }}
-                                        />
-                                        <img
-                                            src={photo5}
-                                            alt="Image not found"
-                                            onClick={() => {
-                                                setCurrentPhoto(photo5);
-                                            }}
-                                        />
+                                        {solutions[0].images.map((image) => (
+                                            <img
+                                                key={image}
+                                                src={image}
+                                                alt="image not found"
+                                                style={{
+                                                    opacity:
+                                                        currentPhoto == image
+                                                            ? 1
+                                                            : 0.5,
+                                                }}
+                                                onClick={() => {
+                                                    setCurrentPhoto(image);
+                                                }}
+                                            />
+                                        ))}
                                     </div>
                                     <button
                                         className="catalog-list__set-stream"
@@ -111,7 +63,10 @@ export const Catalog = () => {
                                     </button>
                                 </div>
                                 <div className="catalog-list__text-block">
-                                    <span className="catalog-list__line"></span>
+                                    <span
+                                        className="catalog-list__line"
+                                        style={{ top: 0 }}
+                                    ></span>
                                     <div className="catalog-list__name">
                                         Digital IP camera for connection to
                                         EasyCam cloud service.
@@ -214,6 +169,10 @@ export const Catalog = () => {
                                         </div>
                                     </div>
                                 </div>
+                                <span
+                                    className="catalog-list__line"
+                                    style={{ bottom: 0 }}
+                                ></span>
                             </div>
                             <div className="catalog-list__purchaseBtn">
                                 <BlueButton>Purchase</BlueButton>
