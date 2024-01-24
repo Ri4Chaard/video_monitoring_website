@@ -283,12 +283,12 @@ export const Menu = () => {
                             <div className="slider__arrows">
                                 <button
                                     disabled={sliderPos == 0}
-                                    className="slider__arrow_left"
+                                    className="arrowBtn_left"
                                     onClick={() => moveSlider(-1)}
                                 ></button>
                                 <button
                                     disabled={sliderPos == 2}
-                                    className="slider__arrow_right"
+                                    className="arrowBtn_right"
                                     onClick={() => moveSlider(1)}
                                 ></button>
                             </div>

@@ -7,6 +7,7 @@ import photo5 from "../img/catalog/photos/photo5.jpg";
 
 export const solutions = [
     {
+        id: 1,
         characteristics: {
             model: "Ecam201",
             resolution1: "2MP 1280*1080P",
@@ -27,6 +28,7 @@ export const solutions = [
         images: [photo2, photo3, photo1, photo4, photo5],
     },
     {
+        id: 2,
         characteristics: {
             model: "Ecam201",
             resolution1: "2MP 1280*1080P",
@@ -47,6 +49,7 @@ export const solutions = [
         images: [photo2, photo3, photo1, photo4, photo5],
     },
     {
+        id: 3,
         characteristics: {
             model: "Ecam201",
             resolution1: "2MP 1280*1080P",
@@ -67,6 +70,7 @@ export const solutions = [
         images: [photo2, photo3, photo1, photo4, photo5],
     },
     {
+        id: 4,
         characteristics: {
             model: "Ecam201",
             resolution1: "2MP 1280*1080P",
@@ -87,6 +91,7 @@ export const solutions = [
         images: [photo2, photo3, photo1, photo4, photo5],
     },
     {
+        id: 5,
         characteristics: {
             model: "Ecam201",
             resolution1: "2MP 1280*1080P",
@@ -107,6 +112,7 @@ export const solutions = [
         images: [photo2, photo3, photo1, photo4, photo5],
     },
     {
+        id: 6,
         characteristics: {
             model: "Ecam201",
             resolution1: "2MP 1280*1080P",
@@ -124,9 +130,10 @@ export const solutions = [
         description:
             "WiFi router with built-in modem. Support for any mobile operators. The ability to connect an external reinforced antenna, raises the quality and speed of the Internet. The ability to connect wired providers gives the presence of a WAN port. Thus 3g/4g modem gives a backup communication channel in case of disconnection of the main wired channel. Operating system openWRT allows you to configure the network for different network needs. Possibility to connect your video surveillance system and EasyCam cloud service",
         translation: vidPrev,
-        images: [photo2, photo3, photo1, photo4, photo5],
+        images: [photo2, photo1, photo3, photo4, photo5],
     },
     {
+        id: 7,
         characteristics: {
             model: "Ecam201",
             resolution1: "2MP 1280*1080P",
@@ -147,6 +154,7 @@ export const solutions = [
         images: [photo2, photo3, photo1, photo4, photo5],
     },
     {
+        id: 8,
         characteristics: {
             model: "Ecam201",
             resolution1: "2MP 1280*1080P",
