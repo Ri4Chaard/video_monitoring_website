@@ -25,7 +25,13 @@ export const solutions = [
         description:
             "The camera has a metal housing that allows you to use for installation both outdoors and indoors. The camera has a built-in microphone. The camera can be connected to a video recorder for local archiving and to a cloud service.",
         translation: vidPrev,
-        images: [photo2, photo3, photo1, photo4, photo5],
+        images: [
+            [photo2, "L4EVTh~W00V?00jDOus;?vM{9Foc"],
+            [photo3, "LCEe_R~WD$4o009Z%N?HxvRjIUs:"],
+            [photo1, "LBAv?}xaIXxY00ofxtM}~WRjIVt7"],
+            [photo4, "L2Ih810000_4.n^+0i9F00?w%NE0"],
+            [photo5, "L3Frw@0200.7AyIV%Lxuv0_3pKRP"],
+        ],
     },
     {
         id: 2,
@@ -46,7 +52,13 @@ export const solutions = [
         description:
             "WiFi router with built-in modem. Support for any mobile operators. The ability to connect an external reinforced antenna, raises the quality and speed of the Internet. The ability to connect wired providers gives the presence of a WAN port. Thus 3g/4g modem gives a backup communication channel in case of disconnection of the main wired channel. Operating system openWRT allows you to configure the network for different network needs. Possibility to connect your video surveillance system and EasyCam cloud service",
         translation: vidPrev,
-        images: [photo2, photo3, photo1, photo4, photo5],
+        images: [
+            [photo2, "L4EVTh~W00V?00jDOus;?vM{9Foc"],
+            [photo3, "LCEe_R~WD$4o009Z%N?HxvRjIUs:"],
+            [photo1, "LBAv?}xaIXxY00ofxtM}~WRjIVt7"],
+            [photo4, "L2Ih810000_4.n^+0i9F00?w%NE0"],
+            [photo5, "L3Frw@0200.7AyIV%Lxuv0_3pKRP"],
+        ],
     },
     {
         id: 3,
@@ -67,7 +79,13 @@ export const solutions = [
         description:
             "The camera has a metal housing that allows you to use for installation both outdoors and indoors. The camera has a built-in microphone. The camera can be connected to a video recorder for local archiving and to a cloud service.",
         translation: vidPrev,
-        images: [photo2, photo3, photo1, photo4, photo5],
+        images: [
+            [photo2, "L4EVTh~W00V?00jDOus;?vM{9Foc"],
+            [photo3, "LCEe_R~WD$4o009Z%N?HxvRjIUs:"],
+            [photo1, "LBAv?}xaIXxY00ofxtM}~WRjIVt7"],
+            [photo4, "L2Ih810000_4.n^+0i9F00?w%NE0"],
+            [photo5, "L3Frw@0200.7AyIV%Lxuv0_3pKRP"],
+        ],
     },
     {
         id: 4,
@@ -88,7 +106,13 @@ export const solutions = [
         description:
             "WiFi router with built-in modem. Support for any mobile operators. The ability to connect an external reinforced antenna, raises the quality and speed of the Internet. The ability to connect wired providers gives the presence of a WAN port. Thus 3g/4g modem gives a backup communication channel in case of disconnection of the main wired channel. Operating system openWRT allows you to configure the network for different network needs. Possibility to connect your video surveillance system and EasyCam cloud service",
         translation: vidPrev,
-        images: [photo2, photo3, photo1, photo4, photo5],
+        images: [
+            [photo2, "L4EVTh~W00V?00jDOus;?vM{9Foc"],
+            [photo3, "LCEe_R~WD$4o009Z%N?HxvRjIUs:"],
+            [photo1, "LBAv?}xaIXxY00ofxtM}~WRjIVt7"],
+            [photo4, "L2Ih810000_4.n^+0i9F00?w%NE0"],
+            [photo5, "L3Frw@0200.7AyIV%Lxuv0_3pKRP"],
+        ],
     },
     {
         id: 5,
@@ -109,7 +133,13 @@ export const solutions = [
         description:
             "The camera has a metal housing that allows you to use for installation both outdoors and indoors. The camera has a built-in microphone. The camera can be connected to a video recorder for local archiving and to a cloud service.",
         translation: vidPrev,
-        images: [photo2, photo3, photo1, photo4, photo5],
+        images: [
+            [photo2, "L4EVTh~W00V?00jDOus;?vM{9Foc"],
+            [photo3, "LCEe_R~WD$4o009Z%N?HxvRjIUs:"],
+            [photo1, "LBAv?}xaIXxY00ofxtM}~WRjIVt7"],
+            [photo4, "L2Ih810000_4.n^+0i9F00?w%NE0"],
+            [photo5, "L3Frw@0200.7AyIV%Lxuv0_3pKRP"],
+        ],
     },
     {
         id: 6,
@@ -130,7 +160,13 @@ export const solutions = [
         description:
             "WiFi router with built-in modem. Support for any mobile operators. The ability to connect an external reinforced antenna, raises the quality and speed of the Internet. The ability to connect wired providers gives the presence of a WAN port. Thus 3g/4g modem gives a backup communication channel in case of disconnection of the main wired channel. Operating system openWRT allows you to configure the network for different network needs. Possibility to connect your video surveillance system and EasyCam cloud service",
         translation: vidPrev,
-        images: [photo2, photo1, photo3, photo4, photo5],
+        images: [
+            [photo2, "L4EVTh~W00V?00jDOus;?vM{9Foc"],
+            [photo1, "LBAv?}xaIXxY00ofxtM}~WRjIVt7"],
+            [photo3, "LCEe_R~WD$4o009Z%N?HxvRjIUs:"],
+            [photo4, "L2Ih810000_4.n^+0i9F00?w%NE0"],
+            [photo5, "L3Frw@0200.7AyIV%Lxuv0_3pKRP"],
+        ],
     },
     {
         id: 7,
@@ -151,7 +187,13 @@ export const solutions = [
         description:
             "The camera has a metal housing that allows you to use for installation both outdoors and indoors. The camera has a built-in microphone. The camera can be connected to a video recorder for local archiving and to a cloud service.",
         translation: vidPrev,
-        images: [photo2, photo3, photo1, photo4, photo5],
+        images: [
+            [photo2, "L4EVTh~W00V?00jDOus;?vM{9Foc"],
+            [photo3, "LCEe_R~WD$4o009Z%N?HxvRjIUs:"],
+            [photo1, "LBAv?}xaIXxY00ofxtM}~WRjIVt7"],
+            [photo4, "L2Ih810000_4.n^+0i9F00?w%NE0"],
+            [photo5, "L3Frw@0200.7AyIV%Lxuv0_3pKRP"],
+        ],
     },
     {
         id: 8,
@@ -172,6 +214,12 @@ export const solutions = [
         description:
             "WiFi router with built-in modem. Support for any mobile operators. The ability to connect an external reinforced antenna, raises the quality and speed of the Internet. The ability to connect wired providers gives the presence of a WAN port. Thus 3g/4g modem gives a backup communication channel in case of disconnection of the main wired channel. Operating system openWRT allows you to configure the network for different network needs. Possibility to connect your video surveillance system and EasyCam cloud service",
         translation: vidPrev,
-        images: [photo2, photo3, photo1, photo4, photo5],
+        images: [
+            [photo2, "L4EVTh~W00V?00jDOus;?vM{9Foc"],
+            [photo3, "LCEe_R~WD$4o009Z%N?HxvRjIUs:"],
+            [photo1, "LBAv?}xaIXxY00ofxtM}~WRjIVt7"],
+            [photo4, "L2Ih810000_4.n^+0i9F00?w%NE0"],
+            [photo5, "L3Frw@0200.7AyIV%Lxuv0_3pKRP"],
+        ],
     },
 ];

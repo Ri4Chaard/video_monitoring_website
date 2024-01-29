@@ -1,51 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import { BlueButton } from "./UI/buttons/blue_button/BlueButton";
+import { ImagesBlock } from "./ImagesBlock";
 
 export const SolutionItem = ({ solution, index }) => {
-    const [broadcast, setBroadcast] = useState(false);
-    const [currentPhoto, setCurrentPhoto] = useState(solution.images[2]);
-
     return (
         <div className="catalog-list__item">
             <div className="catalog-list__item-content">
-                <div className="catalog-list__photos">
-                    <div className="catalog-list__main-photo">
-                        <img
-                            src={
-                                broadcast ? solution.translation : currentPhoto
-                            }
-                            alt="Image not found"
-                        />
-                    </div>
-                    <div className="catalog-list__photo-list">
-                        {solution.images.map((image) => (
-                            <img
-                                key={image}
-                                src={image}
-                                alt="image not found"
-                                style={{
-                                    opacity: currentPhoto == image ? 1 : 0.5,
-                                }}
-                                onClick={() => {
-                                    setCurrentPhoto(image);
-                                }}
-                            />
-                        ))}
-                    </div>
-                    <button
-                        className="catalog-list__set-stream"
-                        style={{
-                            color: broadcast ? "#5C17CD" : "#4466FB",
-                        }}
-                        onClick={() => {
-                            setBroadcast(!broadcast);
-                        }}
-                    >
-                        {broadcast
-                            ? "Broadcast is live now"
-                            : "View the broadcast quality of this camera"}
-                    </button>
-                </div>
+                <ImagesBlock
+                    images={solution.images}
+                    translation={solution.translation}
+                />
                 <div className="catalog-list__text-block">
                     {index == 0 && (
                         <span
