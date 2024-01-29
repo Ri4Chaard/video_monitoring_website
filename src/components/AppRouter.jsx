@@ -1,8 +1,13 @@
-import React from "react";
-import { Navigate, Route, Routes } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import { routes } from "../router";
 
 export const AppRouter = () => {
+    const { pathname } = useLocation();
+    console.log(pathname);
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
     return (
         <Routes>
             {routes.map((route) => (

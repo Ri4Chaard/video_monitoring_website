@@ -12,6 +12,7 @@ export const usePagination = (totalItems, count) => {
     const changePage = (page, index) => {
         setCurrentPage(page);
         setCurrentIndex(index);
+        window.scrollTo(0, 0);
     };
 
     return { totalPages, currentPage, currentIndex, changePage };
