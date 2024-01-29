@@ -14,9 +14,7 @@ export const Pagination = ({
                 className="arrowBtn_left"
                 disabled={currentPage == 1}
                 onClick={() => {
-                    if (currentPage > 1) {
-                        changePage(currentPage - 1, currentIndex - count);
-                    }
+                    changePage(currentPage - 1, currentIndex - count);
                 }}
             ></button>
             <p className={cl.pages}>
@@ -36,9 +34,7 @@ export const Pagination = ({
                 className="arrowBtn_right"
                 disabled={currentPage == totalPages}
                 onClick={() => {
-                    if (currentPage < totalPages) {
-                        changePage(currentPage + 1, currentIndex + count);
-                    }
+                    changePage(currentPage + 1, currentIndex + count);
                 }}
             ></button>
         </div>
