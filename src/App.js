@@ -31,7 +31,9 @@ function App() {
                         <Topbar />
                     </Container>
                 </header>
-                <AppRouter />
+                <main>
+                    <AppRouter />
+                </main>
                 <footer>
                     <Container>
                         <div className="footer">

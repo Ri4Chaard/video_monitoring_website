@@ -14,30 +14,28 @@ export const Catalog = () => {
     const currentItems = useItemPages(solutions, currentIndex, 5);
 
     return (
-        <main>
-            <div className="catalog-list">
-                <Container>
-                    <div className="catalog-list__content">
-                        <div className="catalog-list__header header">
-                            <h1>Ready-made connectivity solutions</h1>
-                        </div>
-                        {currentItems.map((solution, index) => (
-                            <SolutionItem
-                                key={solution.id}
-                                solution={solution}
-                                index={index}
-                            />
-                        ))}
-                        <Pagination
-                            currentPage={currentPage}
-                            totalPages={totalPages}
-                            currentIndex={currentIndex}
-                            count={5}
-                            changePage={changePage}
-                        />
+        <div className="catalog-list">
+            <Container>
+                <div className="catalog-list__content">
+                    <div className="catalog-list__header header">
+                        <h1>Ready-made connectivity solutions</h1>
                     </div>
-                </Container>
-            </div>
-        </main>
+                    {currentItems.map((solution, index) => (
+                        <SolutionItem
+                            key={solution.id}
+                            solution={solution}
+                            index={index}
+                        />
+                    ))}
+                    <Pagination
+                        currentPage={currentPage}
+                        totalPages={totalPages}
+                        currentIndex={currentIndex}
+                        count={5}
+                        changePage={changePage}
+                    />
+                </div>
+            </Container>
+        </div>
     );
 };

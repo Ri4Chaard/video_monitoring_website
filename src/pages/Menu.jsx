@@ -188,7 +188,7 @@ export const Menu = () => {
     };
 
     return (
-        <main>
+        <>
             <div className="slider">
                 <Container>
                     <div className="slider__content">
@@ -718,6 +718,6 @@ export const Menu = () => {
                     </div>
                 </Container>
             </div>
-        </main>
+        </>
     );
 };

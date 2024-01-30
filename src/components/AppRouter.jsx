@@ -4,7 +4,6 @@ import { routes } from "../router";
 
 export const AppRouter = () => {
     const { pathname } = useLocation();
-    console.log(pathname);
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [pathname]);
