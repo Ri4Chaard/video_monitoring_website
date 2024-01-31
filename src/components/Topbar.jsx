@@ -73,7 +73,18 @@ export const Topbar = () => {
                         </NavButton>
                     </Link>
                     <NavButton>Tariffs</NavButton>
-                    <NavButton>News</NavButton>
+                    <Link key="/news" to="/news">
+                        <NavButton
+                            style={{
+                                color: currentPage == 3 ? "#5C17CD" : "",
+                            }}
+                            onClick={() => {
+                                setCurrentPage(3);
+                            }}
+                        >
+                            News
+                        </NavButton>
+                    </Link>
                     <NavButton>Contacts</NavButton>
                 </nav>
                 <div className="topbar__login">

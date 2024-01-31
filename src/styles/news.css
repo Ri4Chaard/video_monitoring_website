@@ -15,11 +15,12 @@
 }
 
 .news__post {
-    margin: 0 0 45px 0;
+    position: relative;
+    padding: 0 0 16.5px 0;
     display: flex;
 }
 .news__post:last-child {
-    margin: 0;
+    margin: 0 0 10px 0;
     display: flex;
 }
 .news__image {
@@ -31,6 +32,8 @@
 .news__text {
     flex: 0 1 764px;
     display: flex;
+    position: relative;
+    cursor: pointer;
 }
 .news__text-content {
     display: flex;
@@ -38,11 +41,11 @@
     flex: 0 1 406px;
 }
 .news__title {
-    padding: 10px 0 0 0;
+    padding: 16.5px 0 0 0;
     flex: 1 0 250px;
 }
 .news__date {
-    padding: 10px 0 0 0;
+    padding: 26.5px 0 0 0;
     margin: 0 0 10px 0;
     display: flex;
 }

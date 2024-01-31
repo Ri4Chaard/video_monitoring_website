@@ -10,6 +10,7 @@ import "./styles/mobile-app.css";
 import "./styles/tariffs.css";
 import "./styles/catalog.css";
 import "./styles/news.css";
+import "./styles/news-list.css";
 import "./styles/footer.css";
 import googlePlay from "./img/app-store/GooglePlay.png";
 import appleStore from "./img/app-store/AppleStore.png";

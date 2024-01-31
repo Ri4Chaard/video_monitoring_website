@@ -24,7 +24,6 @@ export const Menu = () => {
     const [selectedPost, setSelectedPost] = useState(null);
     const { currentPage, setCurrentPage } = useContext(PageContext);
     const nodeRef = useRef(null);
-    const textRefs = useRef([]);
 
     const slides = [
         {
@@ -680,12 +679,7 @@ export const Menu = () => {
                                         }
                                     >
                                         {post.title}
-                                        <div
-                                            className="news__text-content"
-                                            ref={(el) =>
-                                                (textRefs.current[index] = el)
-                                            }
-                                        >
+                                        <div className="news__text-content">
                                             <div
                                                 className="news__date"
                                                 style={
@@ -712,9 +706,14 @@ export const Menu = () => {
                                 </div>
                             ))}
                         </div>
-                        <button className="news__to-news to-smth-btn">
+                        <Link
+                            key="/news"
+                            to="/news"
+                            onClick={() => setCurrentPage(3)}
+                            className="news__to-news to-smth-btn"
+                        >
                             View all
-                        </button>
+                        </Link>
                     </div>
                 </Container>
             </div>
