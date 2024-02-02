@@ -1,3 +1,3 @@
 import { createContext } from "react";
 
-export const PageContext = createContext(0);
+export const PageContext = createContext();

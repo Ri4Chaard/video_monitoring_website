@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Container } from "../components/UI/container/Container";
 import { useRef, useState } from "react";
 import slide1 from "../img/slider/slide1.png";
@@ -17,12 +17,10 @@ import newsImage from "../img/news/news-image.png";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { BlueButton } from "../components/UI/buttons/blue_button/BlueButton";
 import { Link } from "react-router-dom";
-import { PageContext } from "../components/context";
 
 export const Menu = () => {
     const [sliderPos, setSliderPos] = useState(0);
     const [selectedPost, setSelectedPost] = useState(null);
-    const { currentPage, setCurrentPage } = useContext(PageContext);
     const nodeRef = useRef(null);
 
     const slides = [
@@ -626,7 +624,6 @@ export const Menu = () => {
                             key="/catalog"
                             to="/catalog"
                             className="catalog__to-catalog to-smth-btn"
-                            onClick={() => setCurrentPage(1)}
                         >
                             To catalog
                         </Link>
@@ -709,7 +706,6 @@ export const Menu = () => {
                         <Link
                             key="/news"
                             to="/news"
-                            onClick={() => setCurrentPage(3)}
                             className="news__to-news to-smth-btn"
                         >
                             View all

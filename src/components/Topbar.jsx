@@ -7,7 +7,7 @@ import { PageContext } from "./context";
 
 export const Topbar = () => {
     const [windowHeight, setWindowHeight] = useState(0);
-    const { currentPage, setCurrentPage } = useContext(PageContext);
+    const { currentPage } = useContext(PageContext);
 
     useEffect(() => {
         const setFixed = () => {
@@ -20,14 +20,14 @@ export const Topbar = () => {
     return (
         <div
             className={
-                windowHeight >= 748 || currentPage != 0
+                windowHeight >= 748 || currentPage != "/menu"
                     ? "topbar fixed"
                     : "topbar"
             }
         >
             <div
                 className={
-                    windowHeight >= 748 || currentPage != 0
+                    windowHeight >= 748 || currentPage != "/menu"
                         ? "topbar__content "
                         : "topbar__content whiteBtn"
                 }
@@ -35,11 +35,11 @@ export const Topbar = () => {
                     windowHeight >= 81
                         ? {
                               top:
-                                  windowHeight >= 748 || currentPage != 0
+                                  windowHeight >= 748 || currentPage != "/menu"
                                       ? 16
                                       : -100,
                               position:
-                                  windowHeight >= 81 || currentPage != 0
+                                  windowHeight >= 81 || currentPage != "/menu"
                                       ? "fixed"
                                       : "relative",
                           }
@@ -48,14 +48,7 @@ export const Topbar = () => {
             >
                 <div className="topbar__logo">
                     <Link key="/menu" to="/menu">
-                        <img
-                            className="logo"
-                            src={logo}
-                            alt="logo"
-                            onClick={() => {
-                                setCurrentPage(0);
-                            }}
-                        />
+                        <img className="logo" src={logo} alt="logo" />
                     </Link>
                 </div>
                 <nav className="topbar__menu">
@@ -63,10 +56,8 @@ export const Topbar = () => {
                         <NavButton
                             style={{
                                 fontWeight: "500",
-                                color: currentPage == 1 ? "#5C17CD" : "",
-                            }}
-                            onClick={() => {
-                                setCurrentPage(1);
+                                color:
+                                    currentPage == "/catalog" ? "#5C17CD" : "",
                             }}
                         >
                             Ready solutions
@@ -76,10 +67,7 @@ export const Topbar = () => {
                     <Link key="/news" to="/news">
                         <NavButton
                             style={{
-                                color: currentPage == 3 ? "#5C17CD" : "",
-                            }}
-                            onClick={() => {
-                                setCurrentPage(3);
+                                color: currentPage == "/news" ? "#5C17CD" : "",
                             }}
                         >
                             News

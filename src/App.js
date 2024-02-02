@@ -22,7 +22,7 @@ import { useState } from "react";
 import { PageContext } from "./components/context";
 
 function App() {
-    const [currentPage, setCurrentPage] = useState(0);
+    const [currentPage, setCurrentPage] = useState("/menu");
 
     return (
         <PageContext.Provider value={{ currentPage, setCurrentPage }}>
