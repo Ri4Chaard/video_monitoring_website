@@ -58,3 +58,26 @@
 .catalog__to-catalog {
     margin: 40px 0 100px 0;
 }
+
+@media (max-width: 991px) {
+    .catalog__cards {
+        overflow: scroll;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+    }
+    .catalog__card {
+        flex: 0 0 370px;
+    }
+    .catalog__card:first-child {
+        margin: 0 10px 0 0;
+    }
+    .catalog__card:nth-child(2) {
+        margin: 0 10px;
+    }
+    .catalog__card:last-child {
+        margin: 0 0 0 10px;
+    }
+    .catalog__to-catalog {
+        margin: 20px 0 50px 0;
+    }
+}

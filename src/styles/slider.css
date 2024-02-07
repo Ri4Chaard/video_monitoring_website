@@ -71,7 +71,6 @@
     position: relative;
     flex: 1 1 auto;
     height: 500px;
-    /* overflow: hidden; */
 }
 .slider__image img {
     position: absolute;
@@ -262,4 +261,38 @@
 .blur-exit-active {
     opacity: 0;
     transition: 1000ms ease-in-out;
+}
+
+@media (max-width: 991px) {
+    .slider {
+        min-height: 533px;
+        padding: 0 0 40px 0;
+    }
+    .slider__text {
+        flex: 0 0 320px;
+        margin: 0 30px 0 0;
+    }
+    .slider__header {
+        flex: 0 0 93px;
+        margin: 0 0 30px 0;
+        width: 265px;
+    }
+    .slider__paragraph {
+        font-size: 14px;
+    }
+    .slider__image {
+        height: 350px;
+    }
+    .slider__arrows {
+        flex: 0 0 110px;
+    }
+    .slider__numbers {
+        flex: 0 1 611px;
+        display: flex;
+    }
+}
+@media (max-width: 768px) {
+    .slider__image img {
+        width: auto;
+    }
 }

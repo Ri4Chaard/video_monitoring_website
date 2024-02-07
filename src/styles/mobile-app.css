@@ -50,3 +50,10 @@
     height: 100%;
     object-fit: cover;
 }
+
+@media (max-width: 991px) {
+    .mobile-app__bg {
+        width: 825px;
+        height: 350px;
+    }
+}

@@ -17,11 +17,14 @@ import newsImage from "../img/news/news-image.png";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { BlueButton } from "../components/UI/buttons/blue_button/BlueButton";
 import { Link } from "react-router-dom";
+import { useWindowSize } from "../components/hooks/useWindowSize";
 
 export const Menu = () => {
     const [sliderPos, setSliderPos] = useState(0);
     const [selectedPost, setSelectedPost] = useState(null);
     const nodeRef = useRef(null);
+    const currentWindowSize = useWindowSize(window.innerWidth);
+    const catalogListRef = useRef(null);
 
     const slides = [
         {
@@ -49,12 +52,35 @@ export const Menu = () => {
                         position: "absolute",
                         display: "flex",
                         flexDirection: "column",
-                        marginTop: "19px",
+                        marginTop: currentWindowSize < 992 ? "0" : "19px",
+                        padding:
+                            currentWindowSize < 992 ? "80px 15px 35px" : "0",
                     }}
                 >
                     <div style={{ display: "flex" }}>
-                        <img src={newsImage} style={{ marginRight: "27px" }} />
-                        <img src={newsImage} />
+                        <img
+                            src={newsImage}
+                            style={
+                                currentWindowSize < 992
+                                    ? {
+                                          marginRight: "20px",
+                                          objectFit: "contain",
+                                          width: "122px",
+                                      }
+                                    : {
+                                          marginRight: "27px",
+                                          objectFit: "contain",
+                                      }
+                            }
+                        />
+                        <img
+                            src={newsImage}
+                            style={
+                                currentWindowSize < 992
+                                    ? { objectFit: "contain", width: "122px" }
+                                    : {}
+                            }
+                        />
                     </div>
                     <div
                         style={{
@@ -123,15 +149,7 @@ export const Menu = () => {
         },
         {
             date: "07.02.23",
-            image: (
-                <img
-                    style={{
-                        position: "absolute",
-                        marginTop: "19px",
-                    }}
-                    src={newsImage}
-                />
-            ),
+            image: null,
             title: <div className="news__title subheader">Some title here</div>,
             content: (
                 <div className="news__description secondary-text">
@@ -213,8 +231,12 @@ export const Menu = () => {
                                 </div>
                                 <div className="slider__description">
                                     <div className="slider__scroll">
-                                        <span>Scroll</span>
+                                        <span>
+                                            {currentWindowSize >= 992 &&
+                                                "Scroll"}
+                                        </span>
                                     </div>
+
                                     <div className="slider__paragraph">
                                         <div className="slider__paragraph-cell">
                                             <TransitionGroup component={null}>
@@ -398,15 +420,17 @@ export const Menu = () => {
                             <div className="services__header header">
                                 <h1>We provide the following services</h1>
                             </div>
-                            <div className="services__text main-text">
-                                <p>
-                                    In addition, technical support will always
-                                    advise you on any questions, and will also
-                                    carry out remote diagnostics of your system
-                                    upon request and in the shortest possible
-                                    time.
-                                </p>
-                            </div>
+                            {currentWindowSize >= 992 && (
+                                <div className="services__text main-text">
+                                    <p>
+                                        In addition, technical support will
+                                        always advise you on any questions, and
+                                        will also carry out remote diagnostics
+                                        of your system upon request and in the
+                                        shortest possible time.
+                                    </p>
+                                </div>
+                            )}
                         </div>
                         <div className="services__cards">
                             <div className="card">
@@ -432,7 +456,13 @@ export const Menu = () => {
                                     your site
                                 </div>
                             </div>
-                            <div className="card">
+                            <div
+                                className={
+                                    currentWindowSize < 992
+                                        ? "card_horizontal"
+                                        : "card"
+                                }
+                            >
                                 <div className="card__image">
                                     <div className="card__image-bg">
                                         <img src={icon3} alt="not found" />
@@ -555,8 +585,25 @@ export const Menu = () => {
                         <div className="catalog__header header">
                             <h1>Ready-made connectivity solutions</h1>
                         </div>
-                        <div className="catalog__cards">
-                            <div className="catalog__card">
+                        <div
+                            className="catalog__cards"
+                            ref={catalogListRef}
+                            onClick={(e) => console.log(e)}
+                        >
+                            <div
+                                className="catalog__card"
+                                style={
+                                    currentWindowSize < 992
+                                        ? { opacity: 0.9 }
+                                        : { opacity: 1 }
+                                }
+                                onClick={(e) => {
+                                    e.target.scrollIntoView({
+                                        block: "nearest",
+                                        inline: "center",
+                                    });
+                                }}
+                            >
                                 <div className="catalog__card_image">
                                     <img src={cam} />
                                 </div>
@@ -577,7 +624,20 @@ export const Menu = () => {
                                     Guarantee: 1 year
                                 </div>
                             </div>
-                            <div className="catalog__card">
+                            <div
+                                className="catalog__card"
+                                style={
+                                    currentWindowSize < 992
+                                        ? { opacity: 0.9 }
+                                        : { opacity: 1 }
+                                }
+                                onClick={(e) => {
+                                    e.target.scrollIntoView({
+                                        block: "nearest",
+                                        inline: "center",
+                                    });
+                                }}
+                            >
                                 <div className="catalog__card_image">
                                     <img src={cam} />
                                 </div>
@@ -598,7 +658,20 @@ export const Menu = () => {
                                     Guarantee: 1 year
                                 </div>
                             </div>
-                            <div className="catalog__card">
+                            <div
+                                className="catalog__card"
+                                style={
+                                    currentWindowSize < 992
+                                        ? { opacity: 0.9 }
+                                        : { opacity: 1 }
+                                }
+                                onClick={(e) => {
+                                    e.target.scrollIntoView({
+                                        block: "nearest",
+                                        inline: "end",
+                                    });
+                                }}
+                            >
                                 <div className="catalog__card_image">
                                     <img src={cam} />
                                 </div>

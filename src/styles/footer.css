@@ -23,6 +23,7 @@
     margin: 0 30px 0 0;
 }
 .contacts__number {
+    font-size: 16px;
     margin: 0 0 10px 0;
 }
 .contacts__download {
@@ -89,4 +90,22 @@
 }
 .request form input:nth-child(2) {
     margin: 0 0 10px 0;
+}
+
+@media (max-width: 991px) {
+    .links {
+        margin: 0;
+    }
+    .contacts__app-stores img {
+        width: 118px;
+    }
+    .request {
+        display: none;
+    }
+}
+@media (max-width: 768px) {
+    .links {
+        flex: 1 1 auto;
+        margin: 0 0 0 50px;
+    }
 }

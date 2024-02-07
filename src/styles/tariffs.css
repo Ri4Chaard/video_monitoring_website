@@ -5,7 +5,6 @@
 .tariffs__content {
     display: flex;
     flex-direction: column;
-    height: 733px;
     color: #fff;
 }
 .tariffs__header {
@@ -59,4 +58,35 @@
 
 .tariffs__card:hover button {
     background: #386df4;
+}
+
+@media (max-width: 991px) {
+    .tariffs__header {
+        margin: 60px 0 0 0;
+    }
+    .tariffs__cards {
+        flex-wrap: wrap;
+        margin: 40px 0 60px 0;
+    }
+    .tariffs__card {
+        flex: 1 1 350px;
+        padding: 30px;
+    }
+    .tariffs__card:first-child {
+        margin: 0 10px 0 0;
+    }
+    .tariffs__card:nth-last-child(2) {
+        margin: 0 0 0 10px;
+    }
+    .tariffs__card:last-child {
+        margin: 20px 0 0 0;
+        padding: 30px 30px 35px;
+    }
+    .tariffs__card_price {
+        font-size: 28px;
+    }
+    .tariffs__card_price span {
+        align-self: flex-end;
+        margin: 0 0 0 6px;
+    }
 }

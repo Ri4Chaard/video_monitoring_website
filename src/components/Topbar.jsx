@@ -1,13 +1,24 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useMemo, useState } from "react";
 import logo from "../img/logo.png";
 import { NavButton } from "../components/UI/buttons/header_buttons/nav_button/NavButton";
 import { LoginButton } from "../components/UI/buttons/header_buttons/login_button/LoginButton";
 import { Link } from "react-router-dom";
 import { PageContext } from "./context";
+import { useWindowSize } from "./hooks/useWindowSize";
 
 export const Topbar = () => {
     const [windowHeight, setWindowHeight] = useState(0);
     const { currentPage } = useContext(PageContext);
+    const currentWindowSize = useWindowSize(window.innerWidth);
+
+    const calcBP = (width) => {
+        return width < 992 ? 586 : 748;
+    };
+
+    const breakPoint = useMemo(
+        () => calcBP(currentWindowSize),
+        [currentWindowSize]
+    );
 
     useEffect(() => {
         const setFixed = () => {
@@ -20,14 +31,14 @@ export const Topbar = () => {
     return (
         <div
             className={
-                windowHeight >= 748 || currentPage != "/menu"
+                windowHeight >= breakPoint || currentPage != "/menu"
                     ? "topbar fixed"
                     : "topbar"
             }
         >
             <div
                 className={
-                    windowHeight >= 748 || currentPage != "/menu"
+                    windowHeight >= breakPoint || currentPage != "/menu"
                         ? "topbar__content "
                         : "topbar__content whiteBtn"
                 }
@@ -35,7 +46,8 @@ export const Topbar = () => {
                     windowHeight >= 81
                         ? {
                               top:
-                                  windowHeight >= 748 || currentPage != "/menu"
+                                  windowHeight >= breakPoint ||
+                                  currentPage != "/menu"
                                       ? 16
                                       : -100,
                               position:

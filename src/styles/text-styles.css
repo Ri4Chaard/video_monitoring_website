@@ -130,3 +130,29 @@
     width: 30%;
     background: #fff;
 }
+
+@media (max-width: 991px) {
+    .header h1 {
+        font-size: 28px;
+        font-family: Play;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 30.8px;
+    }
+    .subheader {
+        font-family: Play;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 26.4px;
+    }
+    .main-text {
+        font-size: 16px;
+        font-style: normal;
+        line-height: 22.4px;
+        font-weight: 500;
+    }
+    .arrowBtn_left {
+        margin: 0 8px 0 0;
+    }
+}

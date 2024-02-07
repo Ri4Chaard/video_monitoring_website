@@ -35,10 +35,32 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0 10px 0 0;
 }
 
 .topbar__login {
     flex: 0 1 auto;
     display: flex;
     align-items: center;
+}
+@media (max-width: 991px) {
+    .topbar__logo {
+        flex: 0 1 135px;
+    }
+    .topbar__menu {
+        flex: 0 1 380px;
+    }
+    .topbar__login {
+        justify-content: flex-end;
+    }
+}
+
+@media (max-width: 768px) {
+    .topbar__content {
+        justify-content: flex-start;
+    }
+    .topbar__login {
+        flex: 1 1 auto;
+        justify-content: flex-end;
+    }
 }
