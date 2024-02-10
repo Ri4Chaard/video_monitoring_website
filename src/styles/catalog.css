@@ -24,6 +24,7 @@
     padding: 30px 28px 49px;
     box-shadow: 1px 6px 16px 0px rgba(51, 51, 51, 0.08);
     border-radius: 10px;
+    cursor: pointer;
 }
 .catalog__card_image {
     align-self: center;

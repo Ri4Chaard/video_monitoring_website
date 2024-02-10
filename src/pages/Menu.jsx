@@ -200,19 +200,17 @@ export const Menu = () => {
             ),
         },
     ];
-    // const catalogCards = [
-    //     <CatalogCard currentWindowSize={currentWindowSize} image={cam} />,
-    //     <CatalogCard currentWindowSize={currentWindowSize} image={cam} />,
-    //     <CatalogCard currentWindowSize={currentWindowSize} image={cam} />,
-    // ];
 
     const moveSlider = (x) => {
         setSliderPos(sliderPos + x);
     };
-
-    const lowerCatalogBP =
-        (catalogListRef.current.scrollWidth - currentWindowSize) / 3;
-    const upperCatalogBP = lowerCatalogBP * 2;
+    let lowerCatalogBP;
+    let upperCatalogBP;
+    if (catalogListRef.current) {
+        lowerCatalogBP =
+            (catalogListRef.current.scrollWidth - currentWindowSize) / 3;
+        upperCatalogBP = lowerCatalogBP * 2;
+    }
 
     return (
         <>
