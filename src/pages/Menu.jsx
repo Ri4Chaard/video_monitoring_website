@@ -18,10 +18,13 @@ import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { BlueButton } from "../components/UI/buttons/blue_button/BlueButton";
 import { Link } from "react-router-dom";
 import { useWindowSize } from "../components/hooks/useWindowSize";
+import { CatalogCard } from "../components/CatalogCard";
 
 export const Menu = () => {
     const [sliderPos, setSliderPos] = useState(0);
     const [selectedPost, setSelectedPost] = useState(null);
+    const [selectedCard, setSelectedCard] = useState(0);
+    const [currentCard, setCurrentCard] = useState(0);
     const nodeRef = useRef(null);
     const currentWindowSize = useWindowSize(window.innerWidth);
     const catalogListRef = useRef(null);
@@ -197,10 +200,19 @@ export const Menu = () => {
             ),
         },
     ];
+    // const catalogCards = [
+    //     <CatalogCard currentWindowSize={currentWindowSize} image={cam} />,
+    //     <CatalogCard currentWindowSize={currentWindowSize} image={cam} />,
+    //     <CatalogCard currentWindowSize={currentWindowSize} image={cam} />,
+    // ];
 
     const moveSlider = (x) => {
         setSliderPos(sliderPos + x);
     };
+
+    const lowerCatalogBP =
+        (catalogListRef.current.scrollWidth - currentWindowSize) / 3;
+    const upperCatalogBP = lowerCatalogBP * 2;
 
     return (
         <>
@@ -588,110 +600,39 @@ export const Menu = () => {
                         <div
                             className="catalog__cards"
                             ref={catalogListRef}
-                            onClick={(e) => console.log(e)}
+                            onScroll={() => {
+                                if (
+                                    catalogListRef.current.scrollLeft >
+                                        lowerCatalogBP &&
+                                    catalogListRef.current.scrollLeft <=
+                                        upperCatalogBP
+                                )
+                                    setSelectedCard(1);
+                                else if (
+                                    catalogListRef.current.scrollLeft >
+                                    upperCatalogBP
+                                )
+                                    setSelectedCard(2);
+                                else setSelectedCard(0);
+                            }}
+                            onTouchEnd={() => {
+                                setCurrentCard(selectedCard);
+                            }}
                         >
-                            <div
-                                className="catalog__card"
-                                style={
-                                    currentWindowSize < 992
-                                        ? { opacity: 0.9 }
-                                        : { opacity: 1 }
-                                }
-                                onClick={(e) => {
-                                    e.target.scrollIntoView({
-                                        block: "nearest",
-                                        inline: "center",
-                                    });
-                                }}
-                            >
-                                <div className="catalog__card_image">
-                                    <img src={cam} />
-                                </div>
-                                <div className="catalog__card_tag blue-tag">
-                                    For home
-                                </div>
-                                <div className="catalog__card_description">
-                                    Digital IP camera for connecting to the
-                                    EasyCam cloud service.
-                                </div>
-                                <div className="catalog__card_resolution secondary-text">
-                                    Resolution: 1920*1080@25fps
-                                </div>
-                                <div className="catalog__card_lens secondary-text">
-                                    Lens: 2.8mm lens
-                                </div>
-                                <div className="catalog__card_guarantee secondary-text">
-                                    Guarantee: 1 year
-                                </div>
-                            </div>
-                            <div
-                                className="catalog__card"
-                                style={
-                                    currentWindowSize < 992
-                                        ? { opacity: 0.9 }
-                                        : { opacity: 1 }
-                                }
-                                onClick={(e) => {
-                                    e.target.scrollIntoView({
-                                        block: "nearest",
-                                        inline: "center",
-                                    });
-                                }}
-                            >
-                                <div className="catalog__card_image">
-                                    <img src={cam} />
-                                </div>
-                                <div className="catalog__card_tag blue-tag">
-                                    For home
-                                </div>
-                                <div className="catalog__card_description">
-                                    Digital IP camera for connecting to the
-                                    EasyCam cloud service.
-                                </div>
-                                <div className="catalog__card_resolution secondary-text">
-                                    Resolution: 1920*1080@25fps
-                                </div>
-                                <div className="catalog__card_lens secondary-text">
-                                    Lens: 2.8mm lens
-                                </div>
-                                <div className="catalog__card_guarantee secondary-text">
-                                    Guarantee: 1 year
-                                </div>
-                            </div>
-                            <div
-                                className="catalog__card"
-                                style={
-                                    currentWindowSize < 992
-                                        ? { opacity: 0.9 }
-                                        : { opacity: 1 }
-                                }
-                                onClick={(e) => {
-                                    e.target.scrollIntoView({
-                                        block: "nearest",
-                                        inline: "end",
-                                    });
-                                }}
-                            >
-                                <div className="catalog__card_image">
-                                    <img src={cam} />
-                                </div>
-                                <div className="catalog__card_tag blue-tag">
-                                    For home
-                                </div>
-                                <div className="catalog__card_description">
-                                    Digital IP camera for connecting to the
-                                    EasyCam cloud service.
-                                </div>
-                                <div className="catalog__card_resolution secondary-text">
-                                    Resolution: 1920*1080@25fps
-                                </div>
-                                <div className="catalog__card_lens secondary-text">
-                                    Lens: 2.8mm lens
-                                </div>
-                                <div className="catalog__card_guarantee secondary-text">
-                                    Guarantee: 1 year
-                                </div>
-                            </div>
+                            {[0, 1, 2].map((index) => (
+                                <CatalogCard
+                                    key={index}
+                                    currentWindowSize={currentWindowSize}
+                                    image={cam}
+                                    onClickFunc={() => {
+                                        setSelectedCard(index);
+                                        setCurrentCard(index);
+                                    }}
+                                    index={index}
+                                    selectedCard={selectedCard}
+                                    currentCard={currentCard}
+                                />
+                            ))}
                         </div>
                         <Link
                             key="/catalog"

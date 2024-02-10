@@ -62,7 +62,6 @@
 @media (max-width: 991px) {
     .catalog__cards {
         overflow: scroll;
-        scroll-behavior: smooth;
         scrollbar-width: none;
     }
     .catalog__card {
