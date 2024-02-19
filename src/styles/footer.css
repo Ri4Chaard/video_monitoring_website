@@ -93,6 +93,9 @@
 }
 
 @media (max-width: 991px) {
+    .footer__items {
+        margin: 40px 0;
+    }
     .links {
         margin: 0;
     }

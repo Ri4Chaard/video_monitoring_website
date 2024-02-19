@@ -5,7 +5,7 @@ export const useWindowSize = (measure) => {
     if (measure == window.innerWidth) chooser = 1;
     if (measure == window.innerHeight) chooser = 2;
 
-    const [windowSize, setWindowSize] = useState(0);
+    const [windowSize, setWindowSize] = useState();
     useEffect(() => {
         function handleWindowResize() {
             if (chooser == 1) setWindowSize(window.innerWidth);

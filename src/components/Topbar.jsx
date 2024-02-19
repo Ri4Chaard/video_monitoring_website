@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useMemo, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import logo from "../img/logo.png";
 import { NavButton } from "../components/UI/buttons/header_buttons/nav_button/NavButton";
 import { LoginButton } from "../components/UI/buttons/header_buttons/login_button/LoginButton";
@@ -15,10 +15,7 @@ export const Topbar = () => {
         return width < 992 ? 586 : 748;
     };
 
-    const breakPoint = useMemo(
-        () => calcBP(currentWindowSize),
-        [currentWindowSize]
-    );
+    const breakPoint = calcBP(currentWindowSize);
 
     useEffect(() => {
         const setFixed = () => {

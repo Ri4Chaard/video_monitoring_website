@@ -132,6 +132,14 @@
 }
 
 @media (max-width: 991px) {
+    .arrowBtn_left {
+        width: 32px;
+        height: 32px;
+    }
+    .arrowBtn_right {
+        width: 32px;
+        height: 32px;
+    }
     .header h1 {
         font-size: 28px;
         font-family: Play;

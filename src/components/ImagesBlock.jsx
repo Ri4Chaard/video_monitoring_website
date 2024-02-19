@@ -1,9 +1,26 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ImageComponent } from "./ImageComponent";
+import { useWindowSize } from "./hooks/useWindowSize";
 
-export const ImagesBlock = ({ images, translation }) => {
+export const ImagesBlock = ({ images, translation, windowWidth }) => {
     const [broadcast, setBroadcast] = useState(false);
-    const [currentPhoto, setCurrentPhoto] = useState(images[2][0]);
+    const [currentPhoto, setCurrentPhoto] = useState();
+
+    const filterImages = (images, width) => {
+        if (width < 769)
+            return images.filter((img, index) => {
+                if (index == 2) return false;
+                return true;
+            });
+        return images;
+    };
+    const filteredImages = filterImages(images, windowWidth);
+
+    useEffect(() => {
+        windowWidth < 769
+            ? setCurrentPhoto(filteredImages[0][0])
+            : setCurrentPhoto(filteredImages[2][0]);
+    }, [!currentPhoto]);
 
     return (
         <div className="catalog-list__photos">
@@ -16,7 +33,7 @@ export const ImagesBlock = ({ images, translation }) => {
                 />
             </div>
             <div className="catalog-list__photo-list">
-                {images.map((image) => (
+                {filteredImages.map((image) => (
                     <ImageComponent
                         key={image[1]}
                         src={image[0]}

@@ -5,6 +5,7 @@ import { SolutionItem } from "../components/SolutionItem";
 import { useItemPages } from "../components/hooks/useItemPages";
 import { Pagination } from "../components/UI/pagination/Pagination";
 import { usePagination } from "../components/hooks/usePagination";
+import { useWindowSize } from "../components/hooks/useWindowSize";
 
 export const Catalog = () => {
     const { totalPages, currentPage, currentIndex, changePage } = usePagination(
@@ -12,6 +13,7 @@ export const Catalog = () => {
         5
     );
     const currentItems = useItemPages(solutions, currentIndex, 5);
+    const currentWindowSize = useWindowSize(window.innerWidth);
 
     return (
         <div className="catalog-list">
@@ -25,6 +27,7 @@ export const Catalog = () => {
                             key={solution.id}
                             solution={solution}
                             index={index}
+                            windowWidth={currentWindowSize}
                         />
                     ))}
                     <Pagination
