@@ -658,7 +658,11 @@ export const Menu = () => {
                                                 ? {
                                                       opacity: 1,
                                                       left: "0",
-                                                      minHeight: "300px",
+                                                      minHeight:
+                                                          currentWindowSize <
+                                                          992
+                                                              ? "364px"
+                                                              : "300px",
                                                   }
                                                 : {
                                                       opacity: 0,

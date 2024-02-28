@@ -76,7 +76,7 @@
         flex: 1 1 auto;
     }
     .news__text-content {
-        flex: 0 1 370px;
+        flex: 1 1 350px;
     }
     .news__title {
         padding: 10px 20px 0 0;

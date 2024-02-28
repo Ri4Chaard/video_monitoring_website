@@ -5,6 +5,7 @@ import { usePagination } from "../components/hooks/usePagination";
 import { useItemPages } from "../components/hooks/useItemPages";
 import { Pagination } from "../components/UI/pagination/Pagination";
 import { CSSTransition } from "react-transition-group";
+import { useWindowSize } from "../components/hooks/useWindowSize";
 
 export const News = () => {
     const [selectedPost, setSelectedPost] = useState(null);
@@ -14,6 +15,9 @@ export const News = () => {
         5
     );
     const currentItems = useItemPages(news, currentIndex, 5);
+
+    const currentWindowSize = useWindowSize(window.innerWidth);
+
     useEffect(() => {
         setSelectedPost(null);
     }, [currentPage]);
@@ -33,7 +37,7 @@ export const News = () => {
                                             style={{ top: "-1px", opacity: 1 }}
                                         />
                                     )}
-                                    <div className="news__image">
+                                    <div className="news-list__image">
                                         <CSSTransition
                                             in={selectedPost == post.id}
                                             timeout={500}
@@ -51,6 +55,14 @@ export const News = () => {
                                                 ? setSelectedPost(null)
                                                 : setSelectedPost(post.id);
                                         }}
+                                        style={
+                                            currentWindowSize < 992 &&
+                                            selectedPost == post.id
+                                                ? {
+                                                      minHeight: "374px",
+                                                  }
+                                                : {}
+                                        }
                                     >
                                         {index == 0 && (
                                             <span
