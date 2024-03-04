@@ -94,3 +94,21 @@
         flex: 0 1 350px;
     }
 }
+
+@media (max-width: 720px) {
+    .news {
+        background-color: #f8f8f8;
+    }
+    .news__text {
+        flex-direction: column;
+    }
+    .news__title {
+        flex: auto;
+    }
+    .news__text-content {
+        flex: auto;
+    }
+    .news__to-news {
+        margin: 27px 0 48px 0;
+    }
+}

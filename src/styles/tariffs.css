@@ -90,3 +90,21 @@
         margin: 0 0 0 6px;
     }
 }
+
+@media (max-width: 720px) {
+    .tariffs__header {
+        margin: 40px 0 0 0;
+    }
+    .tariffs__cards {
+        margin: 20px 0 40px 0;
+    }
+    .tariffs__card:first-child {
+        margin: 0 0 10px 0;
+    }
+    .tariffs__card:nth-last-child(2) {
+        margin: 0 0 10px 0;
+    }
+    .tariffs__card:last-child {
+        margin: 0;
+    }
+}

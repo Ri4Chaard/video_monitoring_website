@@ -212,7 +212,7 @@ export const Menu = () => {
         upperCatalogBP = lowerCatalogBP * 2;
     }
 
-    return (
+    return currentWindowSize > 720 ? (
         <>
             <div className="slider">
                 <Container>
@@ -707,6 +707,436 @@ export const Menu = () => {
                                                           }
                                                 }
                                             >
+                                                <div className="blue-tag">
+                                                    {post.date}
+                                                </div>
+                                            </div>
+                                            {selectedPost == index
+                                                ? post.content
+                                                : post.previewContent}
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                        <Link
+                            key="/news"
+                            to="/news"
+                            className="news__to-news to-smth-btn"
+                        >
+                            View all
+                        </Link>
+                    </div>
+                </Container>
+            </div>
+        </>
+    ) : (
+        <>
+            <div className="slider">
+                <Container>
+                    <div className="slider__content">
+                        <div className="slider__items">
+                            <div className="slider__text">
+                                <div className="slider__header header">
+                                    <TransitionGroup component={null}>
+                                        {slides.map(
+                                            (slide, index) =>
+                                                index == sliderPos && (
+                                                    <CSSTransition
+                                                        key={index}
+                                                        timeout={700}
+                                                        classNames="headers"
+                                                        mountOnEnter
+                                                        unmountOnExit
+                                                    >
+                                                        <h1 key={index}>
+                                                            {slide.header}
+                                                        </h1>
+                                                    </CSSTransition>
+                                                )
+                                        )}
+                                    </TransitionGroup>
+                                </div>
+                                <div className="slider__image">
+                                    <TransitionGroup component={null}>
+                                        {slides.map(
+                                            (slide, index) =>
+                                                index == sliderPos && (
+                                                    <CSSTransition
+                                                        key={index}
+                                                        timeout={1000}
+                                                        classNames="images"
+                                                        mountOnEnter
+                                                        unmountOnExit
+                                                    >
+                                                        <img
+                                                            key={index}
+                                                            src={slide.slide}
+                                                        />
+                                                    </CSSTransition>
+                                                )
+                                        )}
+                                    </TransitionGroup>
+                                </div>
+                                <div className="slider__description">
+                                    <div className="slider__scroll">
+                                        <span></span>
+                                    </div>
+                                    <div className="slider__paragraph">
+                                        <div className="slider__paragraph-cell">
+                                            <TransitionGroup component={null}>
+                                                {slides.map(
+                                                    (slide, index) =>
+                                                        index == sliderPos && (
+                                                            <CSSTransition
+                                                                key={index}
+                                                                timeout={700}
+                                                                classNames="paragraph"
+                                                                mountOnEnter
+                                                                unmountOnExit
+                                                            >
+                                                                <p key={index}>
+                                                                    {slide.text}
+                                                                </p>
+                                                            </CSSTransition>
+                                                        )
+                                                )}
+                                            </TransitionGroup>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <BlueButton>Submit your application</BlueButton>
+                        </div>
+                        <div className="slider__buttons">
+                            <div className="slider__numbers">
+                                <div
+                                    className="slider__number-box"
+                                    style={
+                                        sliderPos == 0
+                                            ? { opacity: 1 }
+                                            : { opacity: 0.5 }
+                                    }
+                                    onClick={() => setSliderPos(0)}
+                                >
+                                    <div className="slider__number">01</div>
+                                    <div
+                                        className="slider__number-line "
+                                        style={
+                                            sliderPos == 0
+                                                ? {
+                                                      borderLeft:
+                                                          "1px solid #fff",
+                                                      borderRight:
+                                                          "1px solid #fff",
+                                                      borderBottomLeftRadius:
+                                                          "3px",
+                                                  }
+                                                : {
+                                                      borderLeft:
+                                                          "1px solid #fff",
+
+                                                      borderBottomLeftRadius:
+                                                          "3px",
+                                                  }
+                                        }
+                                    ></div>
+                                </div>
+                                <div
+                                    className="slider__number-box"
+                                    style={
+                                        sliderPos == 1
+                                            ? { opacity: 1 }
+                                            : { opacity: 0.5 }
+                                    }
+                                    onClick={() => setSliderPos(1)}
+                                >
+                                    <div className="slider__number">02</div>
+                                    <div
+                                        className="slider__number-line"
+                                        style={
+                                            sliderPos == 1
+                                                ? {
+                                                      borderRight:
+                                                          "1px solid #fff",
+                                                      borderLeft:
+                                                          "1px solid #fff",
+                                                  }
+                                                : {
+                                                      borderRight:
+                                                          sliderPos == 0
+                                                              ? "1px solid #fff"
+                                                              : "none",
+                                                      borderLeft:
+                                                          sliderPos == 2
+                                                              ? "1px solid #fff"
+                                                              : "none",
+                                                  }
+                                        }
+                                    ></div>
+                                </div>
+                                <div
+                                    className="slider__number-box"
+                                    style={
+                                        sliderPos == 2
+                                            ? { opacity: 1 }
+                                            : { opacity: 0.5 }
+                                    }
+                                    onClick={() => setSliderPos(2)}
+                                >
+                                    <div className="slider__number">03</div>
+                                    <div
+                                        className="slider__number-line"
+                                        style={
+                                            sliderPos == 2
+                                                ? {
+                                                      borderLeft:
+                                                          "1px solid #fff",
+                                                      borderRight:
+                                                          "1px solid #fff",
+                                                      borderBottomRightRadius:
+                                                          "3px",
+                                                  }
+                                                : {
+                                                      borderRight:
+                                                          "1px solid #fff",
+                                                      borderBottomRightRadius:
+                                                          "3px",
+                                                  }
+                                        }
+                                    ></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </Container>
+            </div>
+            <div className="services">
+                <Container>
+                    <div className="services__content">
+                        <div className="services__description">
+                            <div className="services__header header">
+                                <h1>We provide the following services</h1>
+                            </div>
+                        </div>
+                        <div className="services__cards">
+                            <div className="card">
+                                <div className="card__image">
+                                    <img src={icon1} alt="not found" />
+                                </div>
+                                <div className="card__header">Installation</div>
+                                <div className="card__text secondary-text">
+                                    We will install CCTV cameras at your home,
+                                    work, cottage or just in the yard
+                                </div>
+                            </div>
+                            <div className="card">
+                                <div className="card__image">
+                                    <div className="card__image-bg">
+                                        <img src={icon2} alt="not found" />
+                                    </div>
+                                </div>
+                                <div className="card__header">Service</div>
+                                <div className="card__text secondary-text">
+                                    If you have any difficulties, we will give
+                                    advice, and if necessary, we will come to
+                                    your site
+                                </div>
+                            </div>
+                            <div className="card">
+                                <div className="card__image">
+                                    <div className="card__image-bg">
+                                        <img src={icon3} alt="not found" />
+                                    </div>
+                                </div>
+                                <div className="card__header">
+                                    Personal account
+                                </div>
+                                <div className="card__text secondary-text">
+                                    Watch the broadcast online, and if we don’t
+                                    have time to store the recordings for 7
+                                    days, just go to the archive
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </Container>
+            </div>
+            <div className="mobile-app">
+                <Container>
+                    <div className="mobile-app__content">
+                        <div className="mobile-app__header header">
+                            <h1>
+                                Download our application in the AppStore and
+                                Google Play
+                            </h1>
+                        </div>
+                        <div className="mobile-app__list main-text">
+                            <ul>
+                                <li>
+                                    <p>
+                                        watch online broadcast from your video
+                                        cameras
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        securely store the archive in the cloud
+                                        for 7 days or more
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>get access to the archive online</p>
+                                </li>
+                                <li>
+                                    <p>save the archive to your devices</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div className="mobile-app__links">
+                            <a href="https://www.google.com">
+                                <img src={googlePlay} />
+                            </a>
+                            <a href="https://www.google.com">
+                                <img src={appleStore} />
+                            </a>
+                        </div>
+                        <div className="mobile-app__bg">
+                            <img src={appStoreBg} />
+                        </div>
+                    </div>
+                </Container>
+            </div>
+            <div className="tariffs">
+                <Container>
+                    <div className="tariffs__content">
+                        <div className="tariffs__header header">
+                            <h1>Select tariff</h1>
+                        </div>
+                        <div className="tariffs__cards">
+                            <div className="tariffs__card">
+                                <div className="tariffs__card_header subheader">
+                                    Standart
+                                </div>
+                                <div className="tariffs__card_price">
+                                    3 $<span>/ month</span>
+                                </div>
+                                <div className="tariffs__card_description secondary-text">
+                                    Archive recording and storage for 7 days.
+                                    Connecting 1 camera. Online access to the
+                                    camera
+                                </div>
+                                <BlueButton>Submit your application</BlueButton>
+                            </div>
+                            <div className="tariffs__card">
+                                <div className="tariffs__card_header subheader">
+                                    Optimal
+                                </div>
+                                <div className="tariffs__card_price">
+                                    7 $<span>/ month</span>
+                                </div>
+                                <div className="tariffs__card_description secondary-text">
+                                    Archive recording and storage for 30 days.
+                                    Connecting 1 camera. Online access to the
+                                    camera
+                                </div>
+                                <BlueButton>Submit your application</BlueButton>
+                            </div>
+                            <div className="tariffs__card">
+                                <div className="tariffs__card_header subheader">
+                                    Business
+                                </div>
+                                <div className="tariffs__card_price">
+                                    10 $<span>/ month</span>
+                                </div>
+                                <div className="tariffs__card_description secondary-text">
+                                    Archive recording and storage for 60 days.
+                                    Connecting 1 camera. Online access to the
+                                    camera
+                                </div>
+                                <BlueButton>Submit your application</BlueButton>
+                            </div>
+                        </div>
+                    </div>
+                </Container>
+            </div>
+            <div className="catalog">
+                <Container>
+                    <div className="catalog__content">
+                        <div className="catalog__header header">
+                            <h1>Ready-made connectivity solutions</h1>
+                        </div>
+                        <div
+                            className="catalog__cards"
+                            ref={catalogListRef}
+                            onScroll={() => {
+                                if (
+                                    catalogListRef.current.scrollLeft >
+                                        lowerCatalogBP &&
+                                    catalogListRef.current.scrollLeft <=
+                                        upperCatalogBP
+                                )
+                                    setSelectedCard(1);
+                                else if (
+                                    catalogListRef.current.scrollLeft >
+                                    upperCatalogBP
+                                )
+                                    setSelectedCard(2);
+                                else setSelectedCard(0);
+                            }}
+                            onTouchEnd={() => {
+                                setCurrentCard(selectedCard);
+                            }}
+                        >
+                            {[0, 1, 2].map((index) => (
+                                <CatalogCard
+                                    key={index}
+                                    currentWindowSize={currentWindowSize}
+                                    image={cam}
+                                    onClickFunc={() => {
+                                        setSelectedCard(index);
+                                        setCurrentCard(index);
+                                    }}
+                                    index={index}
+                                    selectedCard={selectedCard}
+                                    currentCard={currentCard}
+                                />
+                            ))}
+                        </div>
+                        <Link
+                            key="/catalog"
+                            to="/catalog"
+                            className="catalog__to-catalog to-smth-btn"
+                        >
+                            To catalog
+                        </Link>
+                    </div>
+                </Container>
+            </div>
+            <div className="news">
+                <Container>
+                    <div className="news__content">
+                        <div className="news__header header">
+                            <h1>Company's news</h1>
+                        </div>
+                        <div className="news__posts">
+                            {posts.map((post, index) => (
+                                <div className="news__post" key={index}>
+                                    <div
+                                        className="news__text"
+                                        onClick={() => {
+                                            selectedPost == index
+                                                ? setSelectedPost(null)
+                                                : setSelectedPost(index);
+                                        }}
+                                        style={{
+                                            borderTop:
+                                                "1px solid rgba(0, 0, 0, 0.2)",
+                                        }}
+                                    >
+                                        {post.title}
+                                        <div className="news__text-content">
+                                            <div className="news__date">
                                                 <div className="blue-tag">
                                                     {post.date}
                                                 </div>

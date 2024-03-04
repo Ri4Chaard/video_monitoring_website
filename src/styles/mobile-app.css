@@ -30,6 +30,7 @@
 }
 
 .mobile-app__links {
+    z-index: 2;
     display: flex;
     margin: 0 0 148px 0;
 }
@@ -55,5 +56,43 @@
     .mobile-app__bg {
         width: 825px;
         height: 350px;
+    }
+}
+
+@media (max-width: 720px) {
+    .mobile-app {
+        background-color: #f8f8f8;
+    }
+    .mobile-app__content {
+        height: auto;
+    }
+    .mobile-app__header {
+        margin: 40px 0 20px 0;
+    }
+    .mobile-app__list {
+        z-index: 2;
+    }
+    .mobile-app__bg {
+        z-index: 1;
+        left: 0;
+    }
+
+    /* .mobile-app__bg {
+        position: absolute;
+        width: 1003px;
+        height: 425px;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+    } */
+}
+@media (max-width: 360px) {
+    .mobile-app__bg {
+        z-index: 1;
+        width: 620px;
+        height: 256px;
+    }
+    .mobile-app__links {
+        margin: 0 0 40px 0;
     }
 }

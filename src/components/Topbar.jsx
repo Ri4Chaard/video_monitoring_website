@@ -12,7 +12,10 @@ export const Topbar = () => {
     const currentWindowSize = useWindowSize(window.innerWidth);
 
     const calcBP = (width) => {
-        return width < 992 ? 586 : 748;
+        if (width < 992 && width > 720) return 586;
+        else if (width <= 720 && width > 360) {
+            return 845;
+        } else return 748;
     };
 
     const breakPoint = calcBP(currentWindowSize);

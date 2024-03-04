@@ -8,3 +8,15 @@
         max-width: 720px;
     }
 }
+
+@media (max-width: 720px) {
+    .container {
+        max-width: 680px;
+    }
+}
+
+@media (max-width: 360px) {
+    .container {
+        max-width: 320px;
+    }
+}

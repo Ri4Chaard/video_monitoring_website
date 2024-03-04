@@ -64,6 +64,7 @@
     .catalog__cards {
         overflow: scroll;
         scrollbar-width: none;
+        padding: 0 0 10px 0;
     }
     .catalog__card {
         flex: 0 0 370px;
@@ -78,6 +79,18 @@
         margin: 0 0 0 10px;
     }
     .catalog__to-catalog {
-        margin: 20px 0 50px 0;
+        margin: 10px 0 50px 0;
+    }
+}
+
+@media (max-width: 720px) {
+    .catalog__cards {
+        padding: 0 0 10px 0;
+    }
+    .catalog__header {
+        margin: 40px 0 16px 0;
+    }
+    .catalog__to-catalog {
+        margin: 10px 0 32px 0;
     }
 }

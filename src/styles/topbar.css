@@ -1,7 +1,7 @@
 .topbar {
     position: relative;
     padding: 16px 0 0 0;
-    z-index: 1;
+    z-index: 3;
     height: 81px;
 }
 .topbar.fixed {
@@ -58,9 +58,16 @@
 @media (max-width: 768px) {
     .topbar__content {
         justify-content: flex-start;
+        max-width: 720px;
     }
     .topbar__login {
         flex: 1 1 auto;
         justify-content: flex-end;
+    }
+}
+
+@media (max-width: 720px) {
+    .topbar__content {
+        max-width: 680px;
     }
 }
