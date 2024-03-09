@@ -57,7 +57,10 @@ export const SolutionItem = ({ solution, index, windowWidth }) => {
             </p>
         </div>,
 
-        <p style={{ opacity: 0.7, flex: "1 0 auto" }}>
+        <p
+            className="catalog-list__descr"
+            style={{ opacity: 0.7, flex: "1 0 auto" }}
+        >
             {solution.description}
         </p>,
     ];
@@ -71,12 +74,15 @@ export const SolutionItem = ({ solution, index, windowWidth }) => {
                     windowWidth={windowWidth}
                 />
                 <div className="catalog-list__text-block">
-                    {index == 0 && (
-                        <span
-                            className="catalog-list__line"
-                            style={{ top: 0 }}
-                        ></span>
-                    )}
+                    {index == 0 &&
+                        (windowWidth > 720 ? (
+                            <span
+                                className="catalog-list__line"
+                                style={{ top: 0 }}
+                            ></span>
+                        ) : (
+                            <></>
+                        ))}
                     <div className="catalog-list__name">
                         Digital IP camera for connection to EasyCam cloud
                         service.
@@ -177,15 +183,21 @@ export const SolutionItem = ({ solution, index, windowWidth }) => {
                     </div>
                     {windowWidth < 992 && adaptiveDesc[descOption]}
                     {windowWidth < 992 && (
-                        <BlueButton style={{ margin: "12px 0 " }}>
+                        <BlueButton
+                            style={{
+                                margin: windowWidth <= 720 ? "20px" : "12px 0 ",
+                            }}
+                        >
                             Purchase
                         </BlueButton>
                     )}
                 </div>
-                <span
-                    className="catalog-list__line"
-                    style={{ bottom: 0 }}
-                ></span>
+                {windowWidth > 720 && (
+                    <span
+                        className="catalog-list__line"
+                        style={{ bottom: 0 }}
+                    ></span>
+                )}
             </div>
             {windowWidth > 991 && (
                 <div className="catalog-list__purchaseBtn">

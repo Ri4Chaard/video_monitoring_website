@@ -131,6 +131,69 @@
     background: #fff;
 }
 
+/* Image arrow button */
+.imgArrowBtn_left {
+    position: relative;
+    width: 36px;
+    height: 36px;
+    border-radius: 7px;
+    background-color: #fff;
+}
+.imgArrowBtn_left:disabled {
+    opacity: 0.5;
+}
+.imgArrowBtn_left::before {
+    content: "";
+    position: absolute;
+    top: 39%;
+    left: 35%;
+    rotate: -45deg;
+    height: 2px;
+    width: 30%;
+    background: #386df4;
+}
+.imgArrowBtn_left::after {
+    content: "";
+    position: absolute;
+    bottom: 38%;
+    left: 35%;
+    rotate: 45deg;
+    height: 2px;
+    width: 30%;
+    background: #386df4;
+}
+
+.imgArrowBtn_right {
+    position: relative;
+    width: 36px;
+    height: 36px;
+    background-color: #fff;
+    border-radius: 7px;
+}
+.imgArrowBtn_right:disabled {
+    opacity: 0.5;
+}
+.imgArrowBtn_right::before {
+    content: "";
+    position: absolute;
+    top: 39%;
+    left: 35%;
+    rotate: 45deg;
+    height: 2px;
+    width: 30%;
+    background: #386df4;
+}
+.imgArrowBtn_right::after {
+    content: "";
+    position: absolute;
+    bottom: 38%;
+    left: 35%;
+    rotate: -45deg;
+    height: 2px;
+    width: 30%;
+    background: #386df4;
+}
+
 @media (max-width: 991px) {
     .arrowBtn_left {
         width: 32px;

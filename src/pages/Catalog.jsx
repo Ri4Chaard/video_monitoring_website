@@ -22,21 +22,36 @@ export const Catalog = () => {
                     <div className="catalog-list__header header">
                         <h1>Ready-made connectivity solutions</h1>
                     </div>
-                    {currentItems.map((solution, index) => (
-                        <SolutionItem
-                            key={solution.id}
-                            solution={solution}
-                            index={index}
-                            windowWidth={currentWindowSize}
-                        />
-                    ))}
-                    <Pagination
-                        currentPage={currentPage}
-                        totalPages={totalPages}
-                        currentIndex={currentIndex}
-                        count={5}
-                        changePage={changePage}
-                    />
+                    {currentWindowSize <= 720 ? (
+                        <>
+                            {solutions.map((solution, index) => (
+                                <SolutionItem
+                                    key={solution.id}
+                                    solution={solution}
+                                    index={index}
+                                    windowWidth={currentWindowSize}
+                                />
+                            ))}
+                        </>
+                    ) : (
+                        <>
+                            {currentItems.map((solution, index) => (
+                                <SolutionItem
+                                    key={solution.id}
+                                    solution={solution}
+                                    index={index}
+                                    windowWidth={currentWindowSize}
+                                />
+                            ))}
+                            <Pagination
+                                currentPage={currentPage}
+                                totalPages={totalPages}
+                                currentIndex={currentIndex}
+                                count={5}
+                                changePage={changePage}
+                            />
+                        </>
+                    )}
                 </div>
             </Container>
         </div>

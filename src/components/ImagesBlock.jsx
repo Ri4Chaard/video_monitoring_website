@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { ImageComponent } from "./ImageComponent";
-import { useWindowSize } from "./hooks/useWindowSize";
 
 export const ImagesBlock = ({ images, translation, windowWidth }) => {
     const [broadcast, setBroadcast] = useState(false);
     const [currentPhoto, setCurrentPhoto] = useState();
+    const [currentDot, setCurrentDot] = useState(0);
 
     const filterImages = (images, width) => {
         if (width < 769)
@@ -22,7 +22,53 @@ export const ImagesBlock = ({ images, translation, windowWidth }) => {
             : setCurrentPhoto(filteredImages[2][0]);
     }, [!currentPhoto]);
 
-    return (
+    useEffect(() => {
+        setCurrentPhoto(filteredImages[currentDot][0]);
+    }, [currentDot]);
+
+    return windowWidth <= 720 ? (
+        <div className="catalog-list__photos">
+            <div className="catalog-list__main-photo">
+                <ImageComponent
+                    src={currentPhoto}
+                    hash={images[2][1]}
+                    alt="Image not found"
+                    mainPhoto={true}
+                    onClick={() => {
+                        if (currentDot < filteredImages.length - 1)
+                            setCurrentDot(currentDot + 1);
+                    }}
+                />
+            </div>
+            <div className="catalog-list__imgDots">
+                <button
+                    className="imgArrowBtn_left"
+                    onClick={() => {
+                        setCurrentDot(currentDot - 1);
+                    }}
+                    disabled={currentDot == 0}
+                ></button>
+                <div className="catalog-list__dots">
+                    {filteredImages.map((img, index) => (
+                        <div
+                            key={index}
+                            className="catalog-list__dot"
+                            style={{
+                                opacity: currentDot == index ? 1 : 0.5,
+                            }}
+                        ></div>
+                    ))}
+                </div>
+                <button
+                    className="imgArrowBtn_right"
+                    onClick={() => {
+                        setCurrentDot(currentDot + 1);
+                    }}
+                    disabled={currentDot == filteredImages.length - 1}
+                ></button>
+            </div>
+        </div>
+    ) : (
         <div className="catalog-list__photos">
             <div className="catalog-list__main-photo">
                 <ImageComponent
