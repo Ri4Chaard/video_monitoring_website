@@ -6,10 +6,9 @@
     flex-direction: column;
 }
 .news__header {
-    margin: 70px 0 0 0;
+    margin: 70px 0 50px 0;
 }
 .news__posts {
-    margin: 50px 0 0 0;
     display: flex;
     flex-direction: column;
 }
