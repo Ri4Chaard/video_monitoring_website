@@ -130,3 +130,38 @@
         justify-content: space-between;
     }
 }
+
+@media (max-width: 425px) {
+    .topbar {
+        height: 60px;
+    }
+    .topbar__content {
+        height: 40px;
+    }
+    .topbar__burger {
+        width: 30px;
+        height: 18px;
+    }
+    .topbar__burger span {
+        height: 2px;
+        top: 45%;
+    }
+    .topbar__burger span::before {
+        height: 2px;
+        top: -6px;
+    }
+    .topbar__burger span::after {
+        height: 2px;
+        top: 6px;
+    }
+    .topbar__loginIcon {
+        width: 23px;
+        height: 23px;
+    }
+}
+
+@media (max-width: 360px) {
+    .topbar__content {
+        max-width: 320px;
+    }
+}

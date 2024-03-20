@@ -26,6 +26,12 @@
     opacity: 0.7;
     transition: all 200ms ease-in;
 }
+.tariffs__card:first-child {
+    margin: 0 10px 0 0;
+}
+.tariffs__card:last-child {
+    margin: 0 0 0 10px;
+}
 
 .tariffs__card_price {
     margin: 30px 0 0 0;
@@ -106,5 +112,23 @@
     }
     .tariffs__card:last-child {
         margin: 0;
+    }
+}
+
+@media (max-width: 425px) {
+    .tariffs__card {
+        opacity: 1;
+    }
+    .tariffs__card_price {
+        margin: 14px 0 0 0;
+        font-size: 20px;
+        line-height: 24px;
+    }
+    .tariffs__card_price span {
+        font-size: 16px;
+        line-height: 19.2px;
+    }
+    .tariffs__card_description {
+        opacity: 0.7;
     }
 }

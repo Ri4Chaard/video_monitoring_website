@@ -204,6 +204,9 @@
         height: 100%;
         border-radius: 4px 4px 0 0;
     }
+    .catalog-list__photos {
+        margin: 0;
+    }
     .catalog-list__name {
         margin: 0 20px 14px;
     }
@@ -215,5 +218,38 @@
     }
     .catalog-list__descr {
         margin: 0 20px;
+    }
+}
+
+@media (max-width: 425px) {
+    .catalog-list {
+        margin: 80px 0 0 0;
+    }
+    .catalog-list__main-photo {
+        height: 204px;
+    }
+    .catalog-list__photos {
+        flex: 0;
+    }
+    .catalog-list__dot {
+        width: 7px;
+        height: 7px;
+        margin: 2px;
+    }
+
+    .catalog-list__imgDots {
+        margin: 0 0 7px 0;
+    }
+    .catalog-list__name {
+        font-size: 12px;
+    }
+    .catalog-list__text-block_double {
+        margin: 0 10px 0 0;
+    }
+    .catalog-list__characteristics-list {
+        font-size: 11px;
+    }
+    .catalog-list__descr {
+        font-size: 11px;
     }
 }

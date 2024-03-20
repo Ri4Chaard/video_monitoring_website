@@ -17,8 +17,10 @@ export const Topbar = () => {
 
     const calcBP = (width) => {
         if (width < 992 && width > 720) return 586;
-        else if (width <= 720 && width >= 360) {
+        else if (width <= 720 && width > 425) {
             return 845;
+        } else if (width <= 425) {
+            return 646;
         } else return 748;
     };
 

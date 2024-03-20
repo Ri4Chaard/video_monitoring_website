@@ -78,3 +78,12 @@
         margin: 100px 0 0 0;
     }
 }
+
+@media (max-width: 425px) {
+    .news-list {
+        margin: 80px 0 0 0;
+    }
+    .news-list__header {
+        margin: 0 0 18px 0;
+    }
+}

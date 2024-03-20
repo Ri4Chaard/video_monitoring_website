@@ -34,6 +34,12 @@
     box-shadow: 1px 6px 16px 0px rgba(51, 51, 51, 0.08);
     border-radius: 10px;
 }
+.card:first-child {
+    margin: 0 10px 0 0;
+}
+.card:last-child {
+    margin: 0 0 0 10px;
+}
 
 .card__image {
     position: absolute;
@@ -108,5 +114,12 @@
     }
     .services__cards {
         margin: 0 0 40px 0;
+    }
+}
+
+@media (max-width: 425px) {
+    .card__header {
+        font-size: 18px;
+        margin: 0 0 7px 0;
     }
 }

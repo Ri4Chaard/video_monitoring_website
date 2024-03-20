@@ -76,16 +76,29 @@
         z-index: 1;
         left: 0;
     }
-
-    /* .mobile-app__bg {
-        position: absolute;
-        width: 1003px;
-        height: 425px;
-        bottom: 0;
-        right: 0;
-        z-index: -1;
-    } */
 }
+@media (max-width: 425px) {
+    .mobile-app__list li:nth-child(3) {
+        width: 70%;
+    }
+    .mobile-app__list li:nth-child(4) {
+        width: 70%;
+    }
+    .mobile-app__list li p {
+        padding: 0 0 0 17px;
+    }
+    .mobile-app__list li::before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        width: 10px;
+        height: 16px;
+        background: url(/src/img/mark/list-mark.svg) no-repeat;
+        background-position: 0 7px;
+        background-size: contain;
+    }
+}
+
 @media (max-width: 360px) {
     .mobile-app__bg {
         z-index: 1;

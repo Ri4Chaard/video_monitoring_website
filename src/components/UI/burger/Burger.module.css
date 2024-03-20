@@ -56,3 +56,43 @@
 .burgerMenuPhone img {
     width: 72px;
 }
+
+@media (max-width: 586px) {
+    .burgerMenu {
+        width: 350px;
+    }
+    .burgerMenuList {
+        font-size: 30px;
+        line-height: 34px;
+    }
+    .burgerX {
+        width: 16px;
+    }
+    .burgerMenuPhone {
+        font-size: 22px;
+        line-height: 25.2px;
+    }
+    .burgerMenuPhone img {
+        width: 62px;
+    }
+}
+
+@media (max-width: 425px) {
+    .burgerMenu {
+        width: 242px;
+    }
+    .burgerMenuList {
+        font-size: 20px;
+        line-height: 22px;
+    }
+    .burgerX {
+        width: 13px;
+    }
+    .burgerMenuPhone {
+        font-size: 16px;
+        line-height: 17.6px;
+    }
+    .burgerMenuPhone img {
+        width: 36px;
+    }
+}

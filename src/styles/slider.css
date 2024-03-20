@@ -334,3 +334,30 @@
         margin: 0 18px 3px 0;
     }
 }
+@media (max-width: 425px) {
+    .slider__content {
+        margin: 70px 0 0 0;
+    }
+    .slider__header {
+        margin: 0 0 20px 0;
+    }
+    .slider__image {
+        height: 240px;
+    }
+    .slider__description {
+        height: 72px;
+    }
+    .slider__scroll {
+        flex: 0 0 33%;
+    }
+    .slider__scroll span::before {
+        width: 80%;
+    }
+    .slider__paragraph {
+        flex: 0 0 67%;
+    }
+    .slider__number {
+        font-size: 12px;
+        line-height: 14.4px;
+    }
+}

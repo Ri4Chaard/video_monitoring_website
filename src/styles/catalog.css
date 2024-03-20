@@ -26,6 +26,13 @@
     border-radius: 10px;
     cursor: pointer;
 }
+.catalog__card:first-child {
+    margin: 0 10px 0 0;
+}
+.catalog__card:last-child {
+    margin: 0 0 0 10px;
+}
+
 .catalog__card_image {
     align-self: center;
 }
@@ -92,5 +99,36 @@
     }
     .catalog__to-catalog {
         margin: 10px 0 32px 0;
+    }
+}
+
+@media (max-width: 425px) {
+    .catalog__card {
+        flex: 0 0 277px;
+    }
+    .catalog__card:nth-child(2) {
+        margin: 0;
+    }
+    .catalog__card_image img {
+        width: 160px;
+        height: 160px;
+    }
+    .catalog__card_description {
+        margin: 5px 0 0 0;
+        font-size: 14px;
+        line-height: 19.6px;
+    }
+    .catalog__card_resolution {
+        margin: 20px 0 0 0;
+    }
+    .catalog__card_lens {
+        margin: 0;
+    }
+    .catalog__card_guarantee {
+        margin: 0;
+    }
+    .catalog__to-catalog {
+        font-size: 14px;
+        line-height: 15.4px;
     }
 }
