@@ -10,3 +10,9 @@
     text-shadow: 0px 0 10px #fff;
     transition: all 200ms ease-in;
 }
+
+@media (max-width: 991px) {
+    .navButton {
+        font-size: 14px;
+    }
+}

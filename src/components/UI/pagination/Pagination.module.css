@@ -12,3 +12,9 @@
     font-weight: 500;
     line-height: 110%;
 }
+
+@media (max-width: 991px) {
+    .arrows {
+        margin: 20px 0 50px 0;
+    }
+}

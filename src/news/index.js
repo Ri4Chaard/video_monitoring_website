@@ -12,7 +12,6 @@ export const news = [
                     display: "flex",
                     flexDirection: "column",
                     marginTop: "19px",
-                    marginRight: "80px",
                 }}
             >
                 <div
@@ -93,7 +92,6 @@ export const news = [
                     display: "flex",
                     flexDirection: "column",
                     marginTop: "19px",
-                    marginRight: "80px",
                 }}
             >
                 <div
@@ -174,7 +172,6 @@ export const news = [
                     display: "flex",
                     flexDirection: "column",
                     marginTop: "19px",
-                    marginRight: "80px",
                 }}
             >
                 <div
@@ -255,7 +252,6 @@ export const news = [
                     display: "flex",
                     flexDirection: "column",
                     marginTop: "19px",
-                    marginRight: "80px",
                 }}
             >
                 <div
@@ -336,7 +332,6 @@ export const news = [
                     display: "flex",
                     flexDirection: "column",
                     marginTop: "19px",
-                    marginRight: "80px",
                 }}
             >
                 <div
@@ -417,7 +412,6 @@ export const news = [
                     display: "flex",
                     flexDirection: "column",
                     marginTop: "19px",
-                    marginRight: "80px",
                 }}
             >
                 <div
@@ -498,7 +492,6 @@ export const news = [
                     display: "flex",
                     flexDirection: "column",
                     marginTop: "19px",
-                    marginRight: "80px",
                 }}
             >
                 <div
@@ -579,7 +572,6 @@ export const news = [
                     display: "flex",
                     flexDirection: "column",
                     marginTop: "19px",
-                    marginRight: "80px",
                 }}
             >
                 <div
@@ -660,7 +652,6 @@ export const news = [
                     display: "flex",
                     flexDirection: "column",
                     marginTop: "19px",
-                    marginRight: "80px",
                 }}
             >
                 <div
@@ -741,7 +732,6 @@ export const news = [
                     display: "flex",
                     flexDirection: "column",
                     marginTop: "19px",
-                    marginRight: "80px",
                 }}
             >
                 <div
@@ -822,7 +812,6 @@ export const news = [
                     display: "flex",
                     flexDirection: "column",
                     marginTop: "19px",
-                    marginRight: "80px",
                 }}
             >
                 <div
@@ -903,7 +892,6 @@ export const news = [
                     display: "flex",
                     flexDirection: "column",
                     marginTop: "19px",
-                    marginRight: "80px",
                 }}
             >
                 <div
@@ -984,7 +972,6 @@ export const news = [
                     display: "flex",
                     flexDirection: "column",
                     marginTop: "19px",
-                    marginRight: "80px",
                 }}
             >
                 <div

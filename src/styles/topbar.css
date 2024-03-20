@@ -1,7 +1,7 @@
 .topbar {
     position: relative;
     padding: 16px 0 0 0;
-    z-index: 1;
+    z-index: 3;
     height: 81px;
 }
 .topbar.fixed {
@@ -35,10 +35,133 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0 10px 0 0;
 }
 
 .topbar__login {
     flex: 0 1 auto;
     display: flex;
     align-items: center;
+}
+
+.topbar__burger {
+    width: 60px;
+    height: 36px;
+    position: relative;
+    z-index: 10;
+}
+.topbar__burger span {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: #000;
+    border-radius: 5px;
+    top: 45%;
+}
+.topbar__burger span::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: #000;
+    border-radius: 5px;
+    top: -12px;
+}
+.topbar__burger span::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: #000;
+    border-radius: 5px;
+    top: 12px;
+}
+.topbar__content.whiteBtn > .topbar__burger span {
+    background-color: #fff;
+}
+.topbar__content.whiteBtn > .topbar__burger span::before {
+    background-color: #fff;
+}
+.topbar__content.whiteBtn > .topbar__burger span::after {
+    background-color: #fff;
+}
+
+.topbar__loginIcon {
+    width: 46px;
+    height: 46px;
+    position: relative;
+}
+.topbar__loginIcon img {
+    width: 100%;
+}
+
+@media (max-width: 991px) {
+    .topbar__logo {
+        flex: 0 1 135px;
+    }
+    .topbar__menu {
+        flex: 0 1 380px;
+    }
+    .topbar__login {
+        justify-content: flex-end;
+    }
+}
+
+@media (max-width: 768px) {
+    .topbar__content {
+        justify-content: flex-start;
+        max-width: 720px;
+    }
+    .topbar__login {
+        flex: 1 1 auto;
+        justify-content: flex-end;
+    }
+}
+
+@media (max-width: 720px) {
+    .topbar {
+        padding: 16px 0 0 0;
+    }
+    .topbar__content {
+        max-width: 680px;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 425px) {
+    .topbar {
+        height: 60px;
+    }
+    .topbar__content {
+        height: 40px;
+    }
+    .topbar__burger {
+        width: 30px;
+        height: 18px;
+    }
+    .topbar__burger span {
+        height: 2px;
+        top: 45%;
+    }
+    .topbar__burger span::before {
+        height: 2px;
+        top: -6px;
+    }
+    .topbar__burger span::after {
+        height: 2px;
+        top: 6px;
+    }
+    .topbar__loginIcon {
+        width: 23px;
+        height: 23px;
+    }
+}
+
+@media (max-width: 360px) {
+    .topbar__content {
+        max-width: 320px;
+    }
 }

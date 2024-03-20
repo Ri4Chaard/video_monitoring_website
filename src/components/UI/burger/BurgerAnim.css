@@ -1,0 +1,16 @@
+/* CSSTransition */
+.burgerTransition-enter {
+    transform: translateX(-100%);
+}
+.burgerTransition-enter-active {
+    transform: translateX(0);
+    opacity: 1;
+    transition: 500ms ease-in-out, transform 500ms;
+}
+.burgerTransition-exit {
+    opacity: 1;
+}
+.burgerTransition-exit-active {
+    transform: translateX(-100%);
+    transition: 100ms ease-in-out, transform 500ms;
+}

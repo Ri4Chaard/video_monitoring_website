@@ -5,7 +5,6 @@
 .tariffs__content {
     display: flex;
     flex-direction: column;
-    height: 733px;
     color: #fff;
 }
 .tariffs__header {
@@ -26,6 +25,12 @@
     border-radius: 10px;
     opacity: 0.7;
     transition: all 200ms ease-in;
+}
+.tariffs__card:first-child {
+    margin: 0 10px 0 0;
+}
+.tariffs__card:last-child {
+    margin: 0 0 0 10px;
 }
 
 .tariffs__card_price {
@@ -59,4 +64,71 @@
 
 .tariffs__card:hover button {
     background: #386df4;
+}
+
+@media (max-width: 991px) {
+    .tariffs__header {
+        margin: 60px 0 0 0;
+    }
+    .tariffs__cards {
+        flex-wrap: wrap;
+        margin: 40px 0 60px 0;
+    }
+    .tariffs__card {
+        flex: 1 1 350px;
+        padding: 30px;
+    }
+    .tariffs__card:first-child {
+        margin: 0 10px 0 0;
+    }
+    .tariffs__card:nth-last-child(2) {
+        margin: 0 0 0 10px;
+    }
+    .tariffs__card:last-child {
+        margin: 20px 0 0 0;
+        padding: 30px 30px 35px;
+    }
+    .tariffs__card_price {
+        font-size: 28px;
+    }
+    .tariffs__card_price span {
+        align-self: flex-end;
+        margin: 0 0 0 6px;
+    }
+}
+
+@media (max-width: 720px) {
+    .tariffs__header {
+        margin: 40px 0 0 0;
+    }
+    .tariffs__cards {
+        margin: 20px 0 40px 0;
+    }
+    .tariffs__card:first-child {
+        margin: 0 0 10px 0;
+    }
+    .tariffs__card:nth-last-child(2) {
+        margin: 0 0 10px 0;
+    }
+    .tariffs__card:last-child {
+        margin: 0;
+    }
+}
+
+@media (max-width: 425px) {
+    .tariffs__card {
+        opacity: 1;
+    }
+    .tariffs__card_price {
+        margin: 14px 0 0 0;
+        font-size: 20px;
+        line-height: 24px;
+    }
+    .tariffs__card_price span {
+        font-size: 16px;
+        line-height: 19.2px;
+    }
+    .tariffs__card_description {
+        opacity: 0.7;
+    }
 }

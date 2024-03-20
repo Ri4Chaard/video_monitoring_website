@@ -71,7 +71,6 @@
     position: relative;
     flex: 1 1 auto;
     height: 500px;
-    /* overflow: hidden; */
 }
 .slider__image img {
     position: absolute;
@@ -262,4 +261,103 @@
 .blur-exit-active {
     opacity: 0;
     transition: 1000ms ease-in-out;
+}
+
+@media (max-width: 991px) {
+    .slider {
+        min-height: 533px;
+        padding: 0 0 40px 0;
+    }
+    .slider__text {
+        flex: 0 0 320px;
+        margin: 0 30px 0 0;
+    }
+    .slider__header {
+        flex: 0 0 93px;
+        margin: 0 0 30px 0;
+        width: 265px;
+    }
+    .slider__paragraph {
+        font-size: 14px;
+    }
+    .slider__image {
+        height: 350px;
+    }
+    .slider__arrows {
+        flex: 0 0 110px;
+    }
+    .slider__numbers {
+        flex: 0 1 611px;
+        display: flex;
+    }
+}
+@media (max-width: 768px) {
+    .slider__image img {
+        width: auto;
+    }
+}
+
+@media (max-width: 720px) {
+    .slider {
+        min-height: 640px;
+    }
+    .slider__content {
+        margin: 100px 0 0 0;
+    }
+    .slider__items {
+        display: flex;
+        flex-direction: column;
+        z-index: 1;
+        margin: 0 0 42px 0;
+    }
+    .slider__text {
+        margin: 0;
+    }
+    .slider__header {
+        width: 50%;
+    }
+    .slider__image {
+        width: 100%;
+        align-self: center;
+    }
+    .slider__image img {
+        width: 100%;
+    }
+    .slider__numbers {
+        flex: 1 1 auto;
+    }
+    .slider__scroll span::before {
+        content: "";
+        display: inline-block;
+        width: 50%;
+        border-bottom: 1px solid #fff;
+        margin: 0 18px 3px 0;
+    }
+}
+@media (max-width: 425px) {
+    .slider__content {
+        margin: 70px 0 0 0;
+    }
+    .slider__header {
+        margin: 0 0 20px 0;
+    }
+    .slider__image {
+        height: 240px;
+    }
+    .slider__description {
+        height: 72px;
+    }
+    .slider__scroll {
+        flex: 0 0 33%;
+    }
+    .slider__scroll span::before {
+        width: 80%;
+    }
+    .slider__paragraph {
+        flex: 0 0 67%;
+    }
+    .slider__number {
+        font-size: 12px;
+        line-height: 14.4px;
+    }
 }

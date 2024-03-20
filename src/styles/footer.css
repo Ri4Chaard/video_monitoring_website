@@ -23,6 +23,7 @@
     margin: 0 30px 0 0;
 }
 .contacts__number {
+    font-size: 16px;
     margin: 0 0 10px 0;
 }
 .contacts__download {
@@ -89,4 +90,64 @@
 }
 .request form input:nth-child(2) {
     margin: 0 0 10px 0;
+}
+
+@media (max-width: 991px) {
+    .footer__items {
+        margin: 40px 0;
+    }
+    .links {
+        margin: 0;
+    }
+    .contacts__app-stores img {
+        width: 118px;
+    }
+    .request {
+        display: none;
+    }
+}
+@media (max-width: 768px) {
+    .links {
+        flex: 1 1 auto;
+        margin: 0 0 0 50px;
+    }
+}
+
+@media (max-width: 425px) {
+    .footer__items {
+        flex-direction: column-reverse;
+    }
+    .footer__header {
+        font-size: 16px;
+        margin: 0 0 10px 0;
+    }
+    .contacts {
+        margin: 20px 0 0 0;
+    }
+    .contacts__number {
+        font-size: 14px;
+        line-height: 15.4px;
+        margin: 0 0 5px 0;
+    }
+    .contacts__download {
+        font-size: 14px;
+        line-height: 18.2px;
+    }
+    .contacts__app-stores {
+        margin: 0 0 21px 0;
+    }
+    .contacts__app-stores img {
+        width: 82px;
+    }
+    .contacts__copyright {
+        font-size: 14px;
+        line-height: 18.2px;
+    }
+    .links {
+        margin: 0;
+    }
+    .links__items {
+        font-size: 14px;
+        line-height: 18.2px;
+    }
 }
