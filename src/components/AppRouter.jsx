@@ -10,7 +10,6 @@ export const AppRouter = () => {
         window.scrollTo(0, 0);
         setCurrentPage(pathname);
     }, [pathname]);
-    console.log(currentPage);
     return (
         <Routes>
             {routes.map((route) => (

@@ -113,7 +113,6 @@ export const Topbar = () => {
                             className="topbar__burger "
                             onClick={() => {
                                 setBurger(!burger);
-                                console.log(burger);
                             }}
                         >
                             <span></span>
