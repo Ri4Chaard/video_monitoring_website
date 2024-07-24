@@ -22,6 +22,12 @@ export const Topbar = () => {
         } else if (width <= 425) {
             return 646;
         } else return 748;
+        // if (width < 1200 && width > 992) return 992;
+        // else if (width <= 992 && width > 720) return 720;
+        // else if (width <= 720 && width > 680) return 680;
+        // else if (width <= 680 && width > 500) return 500;
+        // else if (width <= 500 && width > 320) return 320;
+        // else return 748;
     };
 
     const breakPoint = calcBP(currentWindowSize);
