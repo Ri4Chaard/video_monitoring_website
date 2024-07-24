@@ -119,14 +119,14 @@
     .topbar__content {
         max-width: 720px;
     }
+    .topbar__login {
+        flex: 1 1 auto;
+        justify-content: flex-end;
+    }
 }
 @media (max-width: 768px) {
     .topbar__content {
         max-width: 720px;
-    }
-    .topbar__login {
-        flex: 1 1 auto;
-        justify-content: flex-end;
     }
 }
 

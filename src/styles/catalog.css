@@ -101,6 +101,20 @@
         margin: 10px 0 32px 0;
     }
 }
+@media (max-width: 500px) {
+    .catalog__cards {
+        padding: 0 0 10px 0;
+    }
+    .catalog__header {
+        margin: 40px 0 16px 0;
+    }
+    .catalog__to-catalog {
+        margin: 10px 0 32px 0;
+    }
+    .catalog__header h1 {
+        width: auto;
+    }
+}
 
 @media (max-width: 425px) {
     .catalog__card {
